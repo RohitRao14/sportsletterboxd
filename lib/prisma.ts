@@ -8,7 +8,7 @@ const globalForPrisma = globalThis as unknown as {
 function createPrismaClient() {
   // Pass connection string config — PrismaPg creates its own Pool internally
   const adapter = new PrismaPg({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: process.env.POSTGRES_URL ?? process.env.DATABASE_URL,
   });
   return new PrismaClient({
     adapter,
