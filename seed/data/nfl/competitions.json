@@ -1,0 +1,5 @@
+[
+  { "id": "nfl-competition-nfl-season-2025", "sport": "NFL", "name": "NFL 2025 Regular Season", "shortName": "NFL 2025", "competitionType": "LEAGUE", "season": "2025", "isActive": true },
+  { "id": "nfl-competition-nfl-playoffs-2025", "sport": "NFL", "name": "NFL Playoffs 2025-26", "shortName": "NFL Playoffs", "competitionType": "TOURNAMENT", "season": "2025", "isActive": true },
+  { "id": "nfl-competition-super-bowl-lx-2026", "sport": "NFL", "name": "Super Bowl LX", "shortName": "Super Bowl LX", "competitionType": "CHAMPIONSHIP", "season": "2025", "isActive": true }
+]

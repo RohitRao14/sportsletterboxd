@@ -1,0 +1,762 @@
+[
+  {
+    "id": "nba-2025-26-opening-night-celtics-vs-knicks",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Boston Celtics vs New York Knicks",
+    "shortName": "Celtics vs Knicks",
+    "startTime": "2025-10-22T19:30:00Z",
+    "venue": "TD Garden",
+    "city": "Boston",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Boston Celtics", "New York Knicks", "Celtics", "Knicks", "BOS", "NYK"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-boston-celtics", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-new-york-knicks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-opening-night-warriors-vs-lakers",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Golden State Warriors vs Los Angeles Lakers",
+    "shortName": "Warriors vs Lakers",
+    "startTime": "2025-10-22T22:30:00Z",
+    "venue": "Chase Center",
+    "city": "San Francisco",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Golden State Warriors", "Los Angeles Lakers", "Warriors", "Lakers", "GSW", "LAL"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-golden-state-warriors", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-los-angeles-lakers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-opening-week-thunder-vs-nuggets",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Oklahoma City Thunder vs Denver Nuggets",
+    "shortName": "Thunder vs Nuggets",
+    "startTime": "2025-10-23T20:00:00Z",
+    "venue": "Paycom Center",
+    "city": "Oklahoma City",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Oklahoma City Thunder", "Denver Nuggets", "Thunder", "Nuggets", "OKC", "DEN"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-oklahoma-city-thunder", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-denver-nuggets", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-celtics-vs-heat",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Boston Celtics vs Miami Heat",
+    "shortName": "Celtics vs Heat",
+    "startTime": "2025-11-05T19:30:00Z",
+    "venue": "TD Garden",
+    "city": "Boston",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Boston Celtics", "Miami Heat", "Celtics", "Heat", "BOS", "MIA"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-boston-celtics", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-miami-heat", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-lakers-vs-clippers",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Los Angeles Lakers vs LA Clippers",
+    "shortName": "Lakers vs Clippers",
+    "startTime": "2025-11-12T22:30:00Z",
+    "venue": "Crypto.com Arena",
+    "city": "Los Angeles",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Los Angeles Lakers", "LA Clippers", "Lakers", "Clippers", "LAL", "LAC"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-los-angeles-lakers", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-la-clippers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-bucks-vs-celtics",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Milwaukee Bucks vs Boston Celtics",
+    "shortName": "Bucks vs Celtics",
+    "startTime": "2025-11-20T20:00:00Z",
+    "venue": "Fiserv Forum",
+    "city": "Milwaukee",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Milwaukee Bucks", "Boston Celtics", "Bucks", "Celtics", "MIL", "BOS"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-milwaukee-bucks", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-boston-celtics", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-knicks-vs-sixers",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "New York Knicks vs Philadelphia 76ers",
+    "shortName": "Knicks vs 76ers",
+    "startTime": "2025-12-03T19:30:00Z",
+    "venue": "Madison Square Garden",
+    "city": "New York",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["New York Knicks", "Philadelphia 76ers", "Knicks", "76ers", "NYK", "PHI"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-new-york-knicks", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-philadelphia-76ers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-christmas-celtics-vs-knicks",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Boston Celtics vs New York Knicks - Christmas Day",
+    "shortName": "Celtics vs Knicks (Xmas)",
+    "startTime": "2025-12-25T12:00:00Z",
+    "venue": "TD Garden",
+    "city": "Boston",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Boston Celtics", "New York Knicks", "Celtics", "Knicks", "BOS", "NYK"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-boston-celtics", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-new-york-knicks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-christmas-lakers-vs-warriors",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Los Angeles Lakers vs Golden State Warriors - Christmas Day",
+    "shortName": "Lakers vs Warriors (Xmas)",
+    "startTime": "2025-12-25T17:00:00Z",
+    "venue": "Crypto.com Arena",
+    "city": "Los Angeles",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Los Angeles Lakers", "Golden State Warriors", "Lakers", "Warriors", "LAL", "GSW"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-los-angeles-lakers", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-golden-state-warriors", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-christmas-thunder-vs-mavs",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Oklahoma City Thunder vs Dallas Mavericks - Christmas Day",
+    "shortName": "Thunder vs Mavs (Xmas)",
+    "startTime": "2025-12-25T14:30:00Z",
+    "venue": "Paycom Center",
+    "city": "Oklahoma City",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Oklahoma City Thunder", "Dallas Mavericks", "Thunder", "Mavericks", "OKC", "DAL"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-oklahoma-city-thunder", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-dallas-mavericks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-mlk-nuggets-vs-thunder",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Denver Nuggets vs Oklahoma City Thunder - MLK Day",
+    "shortName": "Nuggets vs Thunder (MLK)",
+    "startTime": "2026-01-19T15:30:00Z",
+    "venue": "Ball Arena",
+    "city": "Denver",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Denver Nuggets", "Oklahoma City Thunder", "Nuggets", "Thunder", "DEN", "OKC"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-denver-nuggets", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-oklahoma-city-thunder", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-mlk-celtics-vs-cavaliers",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Boston Celtics vs Cleveland Cavaliers - MLK Day",
+    "shortName": "Celtics vs Cavaliers (MLK)",
+    "startTime": "2026-01-19T12:00:00Z",
+    "venue": "TD Garden",
+    "city": "Boston",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Boston Celtics", "Cleveland Cavaliers", "Celtics", "Cavaliers", "BOS", "CLE"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-boston-celtics", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-cleveland-cavaliers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-warriors-vs-lakers-rivalry",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Golden State Warriors vs Los Angeles Lakers",
+    "shortName": "Warriors vs Lakers",
+    "startTime": "2026-02-05T22:30:00Z",
+    "venue": "Chase Center",
+    "city": "San Francisco",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Golden State Warriors", "Los Angeles Lakers", "Warriors", "Lakers", "GSW", "LAL"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-golden-state-warriors", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-los-angeles-lakers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-heat-vs-knicks",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Miami Heat vs New York Knicks",
+    "shortName": "Heat vs Knicks",
+    "startTime": "2026-02-12T19:30:00Z",
+    "venue": "Kaseya Center",
+    "city": "Miami",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Miami Heat", "New York Knicks", "Heat", "Knicks", "MIA", "NYK"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-miami-heat", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-new-york-knicks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-cavaliers-vs-bucks",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Cleveland Cavaliers vs Milwaukee Bucks",
+    "shortName": "Cavaliers vs Bucks",
+    "startTime": "2026-02-25T19:00:00Z",
+    "venue": "Rocket Mortgage FieldHouse",
+    "city": "Cleveland",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Cleveland Cavaliers", "Milwaukee Bucks", "Cavaliers", "Bucks", "CLE", "MIL"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-cleveland-cavaliers", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-milwaukee-bucks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-thunder-vs-timberwolves",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Oklahoma City Thunder vs Minnesota Timberwolves",
+    "shortName": "Thunder vs Timberwolves",
+    "startTime": "2026-03-08T20:00:00Z",
+    "venue": "Paycom Center",
+    "city": "Oklahoma City",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Oklahoma City Thunder", "Minnesota Timberwolves", "Thunder", "Timberwolves", "OKC", "MIN"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-oklahoma-city-thunder", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-minnesota-timberwolves", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-celtics-vs-76ers-late-season",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Boston Celtics vs Philadelphia 76ers",
+    "shortName": "Celtics vs 76ers",
+    "startTime": "2026-03-22T13:00:00Z",
+    "venue": "TD Garden",
+    "city": "Boston",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Boston Celtics", "Philadelphia 76ers", "Celtics", "76ers", "BOS", "PHI"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-boston-celtics", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-philadelphia-76ers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-lakers-vs-nuggets-late-season",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-season-2025-26",
+    "name": "Los Angeles Lakers vs Denver Nuggets",
+    "shortName": "Lakers vs Nuggets",
+    "startTime": "2026-04-05T21:00:00Z",
+    "venue": "Crypto.com Arena",
+    "city": "Los Angeles",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": ["Los Angeles Lakers", "Denver Nuggets", "Lakers", "Nuggets", "LAL", "DEN"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-los-angeles-lakers", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-denver-nuggets", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-east-r1-celtics-vs-heat",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Eastern Conference First Round: Boston Celtics vs Miami Heat - Game 1",
+    "shortName": "Celtics vs Heat (G1)",
+    "startTime": "2026-04-19T14:30:00Z",
+    "venue": "TD Garden",
+    "city": "Boston",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "First Round",
+      "conference": "Eastern",
+      "game": 1,
+      "participantNames": ["Boston Celtics", "Miami Heat", "Celtics", "Heat", "BOS", "MIA"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-boston-celtics", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-miami-heat", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-east-r1-cavaliers-vs-knicks",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Eastern Conference First Round: Cleveland Cavaliers vs New York Knicks - Game 1",
+    "shortName": "Cavaliers vs Knicks (G1)",
+    "startTime": "2026-04-19T19:00:00Z",
+    "venue": "Rocket Mortgage FieldHouse",
+    "city": "Cleveland",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "First Round",
+      "conference": "Eastern",
+      "game": 1,
+      "participantNames": ["Cleveland Cavaliers", "New York Knicks", "Cavaliers", "Knicks", "CLE", "NYK"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-cleveland-cavaliers", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-new-york-knicks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-east-r1-bucks-vs-pacers",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Eastern Conference First Round: Milwaukee Bucks vs Indiana Pacers - Game 1",
+    "shortName": "Bucks vs Pacers (G1)",
+    "startTime": "2026-04-20T13:00:00Z",
+    "venue": "Fiserv Forum",
+    "city": "Milwaukee",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "First Round",
+      "conference": "Eastern",
+      "game": 1,
+      "participantNames": ["Milwaukee Bucks", "Indiana Pacers", "Bucks", "Pacers", "MIL", "IND"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-milwaukee-bucks", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-indiana-pacers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-east-r1-magic-vs-hawks",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Eastern Conference First Round: Orlando Magic vs Atlanta Hawks - Game 1",
+    "shortName": "Magic vs Hawks (G1)",
+    "startTime": "2026-04-20T17:30:00Z",
+    "venue": "Kia Center",
+    "city": "Orlando",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "First Round",
+      "conference": "Eastern",
+      "game": 1,
+      "participantNames": ["Orlando Magic", "Atlanta Hawks", "Magic", "Hawks", "ORL", "ATL"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-orlando-magic", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-atlanta-hawks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-west-r1-thunder-vs-lakers",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Western Conference First Round: Oklahoma City Thunder vs Los Angeles Lakers - Game 1",
+    "shortName": "Thunder vs Lakers (G1)",
+    "startTime": "2026-04-19T16:30:00Z",
+    "venue": "Paycom Center",
+    "city": "Oklahoma City",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "First Round",
+      "conference": "Western",
+      "game": 1,
+      "participantNames": ["Oklahoma City Thunder", "Los Angeles Lakers", "Thunder", "Lakers", "OKC", "LAL"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-oklahoma-city-thunder", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-los-angeles-lakers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-west-r1-nuggets-vs-warriors",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Western Conference First Round: Denver Nuggets vs Golden State Warriors - Game 1",
+    "shortName": "Nuggets vs Warriors (G1)",
+    "startTime": "2026-04-20T21:30:00Z",
+    "venue": "Ball Arena",
+    "city": "Denver",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "First Round",
+      "conference": "Western",
+      "game": 1,
+      "participantNames": ["Denver Nuggets", "Golden State Warriors", "Nuggets", "Warriors", "DEN", "GSW"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-denver-nuggets", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-golden-state-warriors", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-west-r1-timberwolves-vs-mavs",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Western Conference First Round: Minnesota Timberwolves vs Dallas Mavericks - Game 1",
+    "shortName": "Timberwolves vs Mavs (G1)",
+    "startTime": "2026-04-21T19:00:00Z",
+    "venue": "Target Center",
+    "city": "Minneapolis",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "First Round",
+      "conference": "Western",
+      "game": 1,
+      "participantNames": ["Minnesota Timberwolves", "Dallas Mavericks", "Timberwolves", "Mavericks", "MIN", "DAL"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-minnesota-timberwolves", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-dallas-mavericks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-west-r1-suns-vs-rockets",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Western Conference First Round: Phoenix Suns vs Houston Rockets - Game 1",
+    "shortName": "Suns vs Rockets (G1)",
+    "startTime": "2026-04-21T22:30:00Z",
+    "venue": "Footprint Center",
+    "city": "Phoenix",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "First Round",
+      "conference": "Western",
+      "game": 1,
+      "participantNames": ["Phoenix Suns", "Houston Rockets", "Suns", "Rockets", "PHX", "HOU"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-phoenix-suns", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-houston-rockets", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-east-semis-celtics-vs-cavaliers",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Eastern Conference Semifinals: Boston Celtics vs Cleveland Cavaliers - Game 1",
+    "shortName": "Celtics vs Cavaliers (Semis G1)",
+    "startTime": "2026-05-05T19:30:00Z",
+    "venue": "TD Garden",
+    "city": "Boston",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Conference Semifinals",
+      "conference": "Eastern",
+      "game": 1,
+      "participantNames": ["Boston Celtics", "Cleveland Cavaliers", "Celtics", "Cavaliers", "BOS", "CLE"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-boston-celtics", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-cleveland-cavaliers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-east-semis-bucks-vs-magic",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Eastern Conference Semifinals: Milwaukee Bucks vs Orlando Magic - Game 1",
+    "shortName": "Bucks vs Magic (Semis G1)",
+    "startTime": "2026-05-06T19:30:00Z",
+    "venue": "Fiserv Forum",
+    "city": "Milwaukee",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Conference Semifinals",
+      "conference": "Eastern",
+      "game": 1,
+      "participantNames": ["Milwaukee Bucks", "Orlando Magic", "Bucks", "Magic", "MIL", "ORL"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-milwaukee-bucks", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-orlando-magic", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-west-semis-thunder-vs-nuggets",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Western Conference Semifinals: Oklahoma City Thunder vs Denver Nuggets - Game 1",
+    "shortName": "Thunder vs Nuggets (Semis G1)",
+    "startTime": "2026-05-05T22:00:00Z",
+    "venue": "Paycom Center",
+    "city": "Oklahoma City",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Conference Semifinals",
+      "conference": "Western",
+      "game": 1,
+      "participantNames": ["Oklahoma City Thunder", "Denver Nuggets", "Thunder", "Nuggets", "OKC", "DEN"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-oklahoma-city-thunder", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-denver-nuggets", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-west-semis-timberwolves-vs-suns",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Western Conference Semifinals: Minnesota Timberwolves vs Phoenix Suns - Game 1",
+    "shortName": "Timberwolves vs Suns (Semis G1)",
+    "startTime": "2026-05-07T21:30:00Z",
+    "venue": "Target Center",
+    "city": "Minneapolis",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Conference Semifinals",
+      "conference": "Western",
+      "game": 1,
+      "participantNames": ["Minnesota Timberwolves", "Phoenix Suns", "Timberwolves", "Suns", "MIN", "PHX"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-minnesota-timberwolves", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-phoenix-suns", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-east-finals",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Eastern Conference Finals: Boston Celtics vs Milwaukee Bucks - Game 1",
+    "shortName": "ECF - Celtics vs Bucks (G1)",
+    "startTime": "2026-05-19T19:30:00Z",
+    "venue": "TD Garden",
+    "city": "Boston",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Conference Finals",
+      "conference": "Eastern",
+      "game": 1,
+      "participantNames": ["Boston Celtics", "Milwaukee Bucks", "Celtics", "Bucks", "BOS", "MIL"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-boston-celtics", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-milwaukee-bucks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-playoffs-west-finals",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-playoffs-2026",
+    "name": "Western Conference Finals: Oklahoma City Thunder vs Minnesota Timberwolves - Game 1",
+    "shortName": "WCF - Thunder vs Wolves (G1)",
+    "startTime": "2026-05-19T22:00:00Z",
+    "venue": "Paycom Center",
+    "city": "Oklahoma City",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Conference Finals",
+      "conference": "Western",
+      "game": 1,
+      "participantNames": ["Oklahoma City Thunder", "Minnesota Timberwolves", "Thunder", "Timberwolves", "OKC", "MIN"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-oklahoma-city-thunder", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-minnesota-timberwolves", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-nba-finals-game1",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-finals-2026",
+    "name": "NBA Finals 2026: Game 1",
+    "shortName": "NBA Finals G1",
+    "startTime": "2026-06-04T21:00:00Z",
+    "venue": "TD Garden",
+    "city": "Boston",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "NBA Finals",
+      "game": 1,
+      "participantNames": ["Boston Celtics", "Oklahoma City Thunder", "Celtics", "Thunder", "BOS", "OKC"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-boston-celtics", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-oklahoma-city-thunder", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nba-2025-26-nba-finals-game7",
+    "sport": "NBA",
+    "competitionId": "nba-competition-nba-finals-2026",
+    "name": "NBA Finals 2026: Game 7",
+    "shortName": "NBA Finals G7",
+    "startTime": "2026-06-21T21:00:00Z",
+    "venue": "Paycom Center",
+    "city": "Oklahoma City",
+    "country": "USA",
+    "season": "2025-26",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "NBA Finals",
+      "game": 7,
+      "participantNames": ["Oklahoma City Thunder", "Boston Celtics", "Thunder", "Celtics", "OKC", "BOS"]
+    },
+    "participants": [
+      { "entityId": "nba-franchise-oklahoma-city-thunder", "role": "HOME_TEAM" },
+      { "entityId": "nba-franchise-boston-celtics", "role": "AWAY_TEAM" }
+    ]
+  }
+]

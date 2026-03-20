@@ -1,0 +1,15 @@
+[
+  { "id": "cricket-competition-ipl-2026", "sport": "CRICKET", "name": "Indian Premier League 2026", "shortName": "IPL 2026", "competitionType": "TOURNAMENT", "season": "2026", "isActive": true },
+  { "id": "cricket-competition-icc-test-championship-2025-27", "sport": "CRICKET", "name": "ICC World Test Championship 2025-27", "shortName": "WTC 2025-27", "competitionType": "CHAMPIONSHIP", "season": "2025-27", "isActive": true },
+  { "id": "cricket-competition-icc-champions-trophy-2025", "sport": "CRICKET", "name": "ICC Champions Trophy 2025", "shortName": "CT 2025", "competitionType": "TOURNAMENT", "season": "2025", "isActive": false },
+  { "id": "cricket-competition-icc-t20-world-cup-2026", "sport": "CRICKET", "name": "ICC Men's T20 World Cup 2026", "shortName": "T20 WC 2026", "competitionType": "TOURNAMENT", "season": "2026", "isActive": true },
+  { "id": "cricket-competition-odi-world-cup-2027", "sport": "CRICKET", "name": "ICC Men's ODI World Cup 2027", "shortName": "ODI WC 2027", "competitionType": "TOURNAMENT", "season": "2027", "isActive": false },
+  { "id": "cricket-competition-the-ashes-2025-26", "sport": "CRICKET", "name": "The Ashes 2025-26", "shortName": "Ashes 2025-26", "competitionType": "SERIES", "season": "2025-26", "isActive": false },
+  { "id": "cricket-competition-sa20-2026", "sport": "CRICKET", "name": "SA20 2026", "shortName": "SA20 2026", "competitionType": "TOURNAMENT", "season": "2026", "isActive": true },
+  { "id": "cricket-competition-bbl-2025-26", "sport": "CRICKET", "name": "Big Bash League 2025-26", "shortName": "BBL 2025-26", "competitionType": "TOURNAMENT", "season": "2025-26", "isActive": true },
+  { "id": "cricket-competition-cpl-2025", "sport": "CRICKET", "name": "Caribbean Premier League 2025", "shortName": "CPL 2025", "competitionType": "TOURNAMENT", "season": "2025", "isActive": false },
+  { "id": "cricket-competition-the-hundred-2025", "sport": "CRICKET", "name": "The Hundred 2025", "shortName": "The Hundred", "competitionType": "TOURNAMENT", "season": "2025", "isActive": false },
+  { "id": "cricket-competition-psl-2026", "sport": "CRICKET", "name": "Pakistan Super League 2026", "shortName": "PSL 2026", "competitionType": "TOURNAMENT", "season": "2026", "isActive": true },
+  { "id": "cricket-competition-india-england-tests-2025", "sport": "CRICKET", "name": "India vs England Test Series 2025", "shortName": "IND vs ENG Tests", "competitionType": "SERIES", "season": "2025", "isActive": false },
+  { "id": "cricket-competition-india-australia-odis-2025", "sport": "CRICKET", "name": "India vs Australia ODI Series 2025", "shortName": "IND vs AUS ODIs", "competitionType": "SERIES", "season": "2025", "isActive": false }
+]

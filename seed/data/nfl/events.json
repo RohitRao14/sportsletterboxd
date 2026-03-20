@@ -1,0 +1,784 @@
+[
+  {
+    "id": "nfl-2025-wk01-chiefs-vs-ravens",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Kansas City Chiefs vs Baltimore Ravens",
+    "shortName": "Chiefs vs Ravens",
+    "startTime": "2025-09-07T20:20:00Z",
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 1,
+      "participantNames": ["Kansas City Chiefs", "Baltimore Ravens", "Chiefs", "Ravens", "KC", "BAL"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-kansas-city-chiefs", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-baltimore-ravens", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk01-eagles-vs-packers",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Philadelphia Eagles vs Green Bay Packers",
+    "shortName": "Eagles vs Packers",
+    "startTime": "2025-09-05T20:20:00Z",
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 1,
+      "participantNames": ["Philadelphia Eagles", "Green Bay Packers", "Eagles", "Packers", "PHI", "GB"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-philadelphia-eagles", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-green-bay-packers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk01-cowboys-vs-browns",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Dallas Cowboys vs Cleveland Browns",
+    "shortName": "Cowboys vs Browns",
+    "startTime": "2025-09-07T17:00:00Z",
+    "venue": "AT&T Stadium",
+    "city": "Arlington",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 1,
+      "participantNames": ["Dallas Cowboys", "Cleveland Browns", "Cowboys", "Browns", "DAL", "CLE"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-dallas-cowboys", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-cleveland-browns", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk01-lions-vs-rams",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Detroit Lions vs Los Angeles Rams",
+    "shortName": "Lions vs Rams",
+    "startTime": "2025-09-07T13:00:00Z",
+    "venue": "Ford Field",
+    "city": "Detroit",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 1,
+      "participantNames": ["Detroit Lions", "Los Angeles Rams", "Lions", "Rams", "DET", "LAR"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-detroit-lions", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-los-angeles-rams", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk01-bills-vs-jets",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Buffalo Bills vs New York Jets",
+    "shortName": "Bills vs Jets",
+    "startTime": "2025-09-07T13:00:00Z",
+    "venue": "Highmark Stadium",
+    "city": "Orchard Park",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 1,
+      "participantNames": ["Buffalo Bills", "New York Jets", "Bills", "Jets", "BUF", "NYJ"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-buffalo-bills", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-new-york-jets", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk04-chiefs-vs-raiders",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Kansas City Chiefs vs Las Vegas Raiders",
+    "shortName": "Chiefs vs Raiders",
+    "startTime": "2025-09-28T20:20:00Z",
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 4,
+      "participantNames": ["Kansas City Chiefs", "Las Vegas Raiders", "Chiefs", "Raiders", "KC", "LV"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-kansas-city-chiefs", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-las-vegas-raiders", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk04-49ers-vs-cowboys",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "San Francisco 49ers vs Dallas Cowboys",
+    "shortName": "49ers vs Cowboys",
+    "startTime": "2025-09-28T16:25:00Z",
+    "venue": "Levi's Stadium",
+    "city": "Santa Clara",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 4,
+      "participantNames": ["San Francisco 49ers", "Dallas Cowboys", "49ers", "Cowboys", "SF", "DAL"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-san-francisco-49ers", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-dallas-cowboys", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk06-steelers-vs-ravens",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Pittsburgh Steelers vs Baltimore Ravens",
+    "shortName": "Steelers vs Ravens",
+    "startTime": "2025-10-12T20:20:00Z",
+    "venue": "Acrisure Stadium",
+    "city": "Pittsburgh",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 6,
+      "participantNames": ["Pittsburgh Steelers", "Baltimore Ravens", "Steelers", "Ravens", "PIT", "BAL"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-pittsburgh-steelers", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-baltimore-ravens", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk07-packers-vs-vikings",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Green Bay Packers vs Minnesota Vikings",
+    "shortName": "Packers vs Vikings",
+    "startTime": "2025-10-19T20:20:00Z",
+    "venue": "Lambeau Field",
+    "city": "Green Bay",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 7,
+      "participantNames": ["Green Bay Packers", "Minnesota Vikings", "Packers", "Vikings", "GB", "MIN"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-green-bay-packers", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-minnesota-vikings", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk09-london-jaguars-vs-bears",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Jacksonville Jaguars vs Chicago Bears (London)",
+    "shortName": "Jaguars vs Bears (London)",
+    "startTime": "2025-10-05T14:30:00Z",
+    "venue": "Tottenham Hotspur Stadium",
+    "city": "London",
+    "country": "UK",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 5,
+      "participantNames": ["Jacksonville Jaguars", "Chicago Bears", "Jaguars", "Bears", "JAX", "CHI"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-jacksonville-jaguars", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-chicago-bears", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk10-chiefs-vs-bengals",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Kansas City Chiefs vs Cincinnati Bengals",
+    "shortName": "Chiefs vs Bengals",
+    "startTime": "2025-11-09T20:20:00Z",
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 10,
+      "participantNames": ["Kansas City Chiefs", "Cincinnati Bengals", "Chiefs", "Bengals", "KC", "CIN"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-kansas-city-chiefs", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-cincinnati-bengals", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk13-chiefs-vs-bengals-rematch",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Kansas City Chiefs vs Cincinnati Bengals - Week 13",
+    "shortName": "Chiefs vs Bengals (Wk 13)",
+    "startTime": "2025-11-30T20:20:00Z",
+    "venue": "Paycor Stadium",
+    "city": "Cincinnati",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 13,
+      "participantNames": ["Kansas City Chiefs", "Cincinnati Bengals", "Chiefs", "Bengals", "KC", "CIN"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-cincinnati-bengals", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-kansas-city-chiefs", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk13-eagles-vs-ravens",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Philadelphia Eagles vs Baltimore Ravens",
+    "shortName": "Eagles vs Ravens",
+    "startTime": "2025-11-30T17:00:00Z",
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 13,
+      "participantNames": ["Philadelphia Eagles", "Baltimore Ravens", "Eagles", "Ravens", "PHI", "BAL"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-philadelphia-eagles", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-baltimore-ravens", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk14-lions-vs-packers",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Detroit Lions vs Green Bay Packers",
+    "shortName": "Lions vs Packers",
+    "startTime": "2025-12-07T20:20:00Z",
+    "venue": "Ford Field",
+    "city": "Detroit",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 14,
+      "participantNames": ["Detroit Lions", "Green Bay Packers", "Lions", "Packers", "DET", "GB"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-detroit-lions", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-green-bay-packers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk14-49ers-vs-seahawks",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "San Francisco 49ers vs Seattle Seahawks",
+    "shortName": "49ers vs Seahawks",
+    "startTime": "2025-12-07T16:25:00Z",
+    "venue": "Levi's Stadium",
+    "city": "Santa Clara",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 14,
+      "participantNames": ["San Francisco 49ers", "Seattle Seahawks", "49ers", "Seahawks", "SF", "SEA"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-san-francisco-49ers", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-seattle-seahawks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk15-bills-vs-chiefs",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Buffalo Bills vs Kansas City Chiefs",
+    "shortName": "Bills vs Chiefs",
+    "startTime": "2025-12-14T20:20:00Z",
+    "venue": "Highmark Stadium",
+    "city": "Orchard Park",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 15,
+      "participantNames": ["Buffalo Bills", "Kansas City Chiefs", "Bills", "Chiefs", "BUF", "KC"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-buffalo-bills", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-kansas-city-chiefs", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk16-cowboys-vs-eagles",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Dallas Cowboys vs Philadelphia Eagles",
+    "shortName": "Cowboys vs Eagles",
+    "startTime": "2025-12-21T20:20:00Z",
+    "venue": "AT&T Stadium",
+    "city": "Arlington",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 16,
+      "participantNames": ["Dallas Cowboys", "Philadelphia Eagles", "Cowboys", "Eagles", "DAL", "PHI"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-dallas-cowboys", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-philadelphia-eagles", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk17-lions-vs-vikings",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Detroit Lions vs Minnesota Vikings",
+    "shortName": "Lions vs Vikings",
+    "startTime": "2025-12-28T20:20:00Z",
+    "venue": "Ford Field",
+    "city": "Detroit",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 17,
+      "participantNames": ["Detroit Lions", "Minnesota Vikings", "Lions", "Vikings", "DET", "MIN"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-detroit-lions", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-minnesota-vikings", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk18-ravens-vs-bills",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Baltimore Ravens vs Buffalo Bills",
+    "shortName": "Ravens vs Bills",
+    "startTime": "2026-01-04T18:00:00Z",
+    "venue": "M&T Bank Stadium",
+    "city": "Baltimore",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 18,
+      "participantNames": ["Baltimore Ravens", "Buffalo Bills", "Ravens", "Bills", "BAL", "BUF"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-baltimore-ravens", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-buffalo-bills", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk18-chiefs-vs-broncos",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Kansas City Chiefs vs Denver Broncos",
+    "shortName": "Chiefs vs Broncos",
+    "startTime": "2026-01-04T18:00:00Z",
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 18,
+      "participantNames": ["Kansas City Chiefs", "Denver Broncos", "Chiefs", "Broncos", "KC", "DEN"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-kansas-city-chiefs", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-denver-broncos", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk18-eagles-vs-giants",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "Philadelphia Eagles vs New York Giants",
+    "shortName": "Eagles vs Giants",
+    "startTime": "2026-01-04T18:00:00Z",
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 18,
+      "participantNames": ["Philadelphia Eagles", "New York Giants", "Eagles", "Giants", "PHI", "NYG"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-philadelphia-eagles", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-new-york-giants", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-wk18-49ers-vs-rams",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-season-2025",
+    "name": "San Francisco 49ers vs Los Angeles Rams",
+    "shortName": "49ers vs Rams",
+    "startTime": "2026-01-04T21:25:00Z",
+    "venue": "Levi's Stadium",
+    "city": "Santa Clara",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "week": 18,
+      "participantNames": ["San Francisco 49ers", "Los Angeles Rams", "49ers", "Rams", "SF", "LAR"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-san-francisco-49ers", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-los-angeles-rams", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-wildcard-afc1",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "AFC Wild Card Game 1",
+    "shortName": "AFC WC1",
+    "startTime": "2026-01-10T18:00:00Z",
+    "venue": "M&T Bank Stadium",
+    "city": "Baltimore",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Wild Card",
+      "conference": "AFC",
+      "participantNames": ["Baltimore Ravens", "Pittsburgh Steelers", "Ravens", "Steelers", "BAL", "PIT"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-baltimore-ravens", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-pittsburgh-steelers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-wildcard-afc2",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "AFC Wild Card Game 2",
+    "shortName": "AFC WC2",
+    "startTime": "2026-01-11T16:30:00Z",
+    "venue": "Highmark Stadium",
+    "city": "Orchard Park",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Wild Card",
+      "conference": "AFC",
+      "participantNames": ["Buffalo Bills", "Houston Texans", "Bills", "Texans", "BUF", "HOU"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-buffalo-bills", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-houston-texans", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-wildcard-afc3",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "AFC Wild Card Game 3",
+    "shortName": "AFC WC3",
+    "startTime": "2026-01-12T21:15:00Z",
+    "venue": "Paycor Stadium",
+    "city": "Cincinnati",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Wild Card",
+      "conference": "AFC",
+      "participantNames": ["Cincinnati Bengals", "Los Angeles Chargers", "Bengals", "Chargers", "CIN", "LAC"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-cincinnati-bengals", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-los-angeles-chargers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-wildcard-nfc1",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "NFC Wild Card Game 1",
+    "shortName": "NFC WC1",
+    "startTime": "2026-01-10T21:15:00Z",
+    "venue": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Wild Card",
+      "conference": "NFC",
+      "participantNames": ["Philadelphia Eagles", "Green Bay Packers", "Eagles", "Packers", "PHI", "GB"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-philadelphia-eagles", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-green-bay-packers", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-wildcard-nfc2",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "NFC Wild Card Game 2",
+    "shortName": "NFC WC2",
+    "startTime": "2026-01-11T20:00:00Z",
+    "venue": "Ford Field",
+    "city": "Detroit",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Wild Card",
+      "conference": "NFC",
+      "participantNames": ["Detroit Lions", "Minnesota Vikings", "Lions", "Vikings", "DET", "MIN"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-detroit-lions", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-minnesota-vikings", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-wildcard-nfc3",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "NFC Wild Card Game 3",
+    "shortName": "NFC WC3",
+    "startTime": "2026-01-12T18:00:00Z",
+    "venue": "Levi's Stadium",
+    "city": "Santa Clara",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Wild Card",
+      "conference": "NFC",
+      "participantNames": ["San Francisco 49ers", "Seattle Seahawks", "49ers", "Seahawks", "SF", "SEA"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-san-francisco-49ers", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-seattle-seahawks", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-divisional-afc1",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "AFC Divisional Round Game 1",
+    "shortName": "AFC Div 1",
+    "startTime": "2026-01-17T16:30:00Z",
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Divisional",
+      "conference": "AFC",
+      "participantNames": ["Kansas City Chiefs", "Buffalo Bills", "Chiefs", "Bills", "KC", "BUF"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-kansas-city-chiefs", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-buffalo-bills", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-divisional-afc2",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "AFC Divisional Round Game 2",
+    "shortName": "AFC Div 2",
+    "startTime": "2026-01-18T20:00:00Z",
+    "venue": "M&T Bank Stadium",
+    "city": "Baltimore",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Divisional",
+      "conference": "AFC",
+      "participantNames": ["Baltimore Ravens", "Cincinnati Bengals", "Ravens", "Bengals", "BAL", "CIN"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-baltimore-ravens", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-cincinnati-bengals", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-divisional-nfc1",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "NFC Divisional Round Game 1",
+    "shortName": "NFC Div 1",
+    "startTime": "2026-01-17T20:00:00Z",
+    "venue": "Ford Field",
+    "city": "Detroit",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Divisional",
+      "conference": "NFC",
+      "participantNames": ["Detroit Lions", "Philadelphia Eagles", "Lions", "Eagles", "DET", "PHI"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-detroit-lions", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-philadelphia-eagles", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-divisional-nfc2",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "NFC Divisional Round Game 2",
+    "shortName": "NFC Div 2",
+    "startTime": "2026-01-18T16:30:00Z",
+    "venue": "Levi's Stadium",
+    "city": "Santa Clara",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Divisional",
+      "conference": "NFC",
+      "participantNames": ["San Francisco 49ers", "Los Angeles Rams", "49ers", "Rams", "SF", "LAR"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-san-francisco-49ers", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-los-angeles-rams", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-afc-championship",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "AFC Championship Game",
+    "shortName": "AFC Championship",
+    "startTime": "2026-01-25T15:00:00Z",
+    "venue": "Arrowhead Stadium",
+    "city": "Kansas City",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Conference Championship",
+      "conference": "AFC",
+      "participantNames": ["Kansas City Chiefs", "Baltimore Ravens", "Chiefs", "Ravens", "KC", "BAL"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-kansas-city-chiefs", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-baltimore-ravens", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-playoffs-nfc-championship",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-nfl-playoffs-2025",
+    "name": "NFC Championship Game",
+    "shortName": "NFC Championship",
+    "startTime": "2026-01-25T18:30:00Z",
+    "venue": "Ford Field",
+    "city": "Detroit",
+    "country": "USA",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Conference Championship",
+      "conference": "NFC",
+      "participantNames": ["Detroit Lions", "Philadelphia Eagles", "Lions", "Eagles", "DET", "PHI"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-detroit-lions", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-philadelphia-eagles", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "nfl-2025-super-bowl-lx",
+    "sport": "NFL",
+    "competitionId": "nfl-competition-super-bowl-lx-2026",
+    "name": "Super Bowl LX",
+    "shortName": "Super Bowl LX",
+    "startTime": "2026-02-08T18:30:00Z",
+    "venue": "Caesars Superdome",
+    "city": "New Orleans",
+    "country": "USA",
+    "season": "2025",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "round": "Super Bowl",
+      "participantNames": ["Kansas City Chiefs", "Philadelphia Eagles", "Chiefs", "Eagles", "KC", "PHI"]
+    },
+    "participants": [
+      { "entityId": "nfl-franchise-kansas-city-chiefs", "role": "HOME_TEAM" },
+      { "entityId": "nfl-franchise-philadelphia-eagles", "role": "AWAY_TEAM" }
+    ]
+  }
+]

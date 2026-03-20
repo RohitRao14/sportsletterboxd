@@ -1,0 +1,19 @@
+[
+  { "id": "football-competition-premier-league-2025-26", "sport": "FOOTBALL", "name": "Premier League", "shortName": "PL", "competitionType": "LEAGUE", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-la-liga-2025-26", "sport": "FOOTBALL", "name": "La Liga", "shortName": "La Liga", "competitionType": "LEAGUE", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-bundesliga-2025-26", "sport": "FOOTBALL", "name": "Bundesliga", "shortName": "Bundesliga", "competitionType": "LEAGUE", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-serie-a-2025-26", "sport": "FOOTBALL", "name": "Serie A", "shortName": "Serie A", "competitionType": "LEAGUE", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-ligue-1-2025-26", "sport": "FOOTBALL", "name": "Ligue 1", "shortName": "Ligue 1", "competitionType": "LEAGUE", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-mls-2025", "sport": "FOOTBALL", "name": "Major League Soccer", "shortName": "MLS", "competitionType": "LEAGUE", "season": "2025", "isActive": true },
+  { "id": "football-competition-champions-league-2025-26", "sport": "FOOTBALL", "name": "UEFA Champions League", "shortName": "UCL", "competitionType": "TOURNAMENT", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-europa-league-2025-26", "sport": "FOOTBALL", "name": "UEFA Europa League", "shortName": "UEL", "competitionType": "TOURNAMENT", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-conference-league-2025-26", "sport": "FOOTBALL", "name": "UEFA Conference League", "shortName": "UECL", "competitionType": "TOURNAMENT", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-fa-cup-2025-26", "sport": "FOOTBALL", "name": "FA Cup", "shortName": "FA Cup", "competitionType": "CUP", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-copa-del-rey-2025-26", "sport": "FOOTBALL", "name": "Copa del Rey", "shortName": "Copa del Rey", "competitionType": "CUP", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-dfb-pokal-2025-26", "sport": "FOOTBALL", "name": "DFB-Pokal", "shortName": "DFB-Pokal", "competitionType": "CUP", "season": "2025-26", "isActive": true },
+  { "id": "football-competition-world-cup-2026", "sport": "FOOTBALL", "name": "FIFA World Cup 2026", "shortName": "WC 2026", "competitionType": "TOURNAMENT", "season": "2026", "isActive": true },
+  { "id": "football-competition-nations-league-2024-25", "sport": "FOOTBALL", "name": "UEFA Nations League", "shortName": "Nations League", "competitionType": "TOURNAMENT", "season": "2024-25", "isActive": false },
+  { "id": "football-competition-copa-america-2024", "sport": "FOOTBALL", "name": "Copa America 2024", "shortName": "Copa America", "competitionType": "TOURNAMENT", "season": "2024", "isActive": false },
+  { "id": "football-competition-afcon-2025", "sport": "FOOTBALL", "name": "Africa Cup of Nations 2025", "shortName": "AFCON 2025", "competitionType": "TOURNAMENT", "season": "2025", "isActive": false },
+  { "id": "football-competition-carabao-cup-2025-26", "sport": "FOOTBALL", "name": "EFL Carabao Cup", "shortName": "League Cup", "competitionType": "CUP", "season": "2025-26", "isActive": true }
+]

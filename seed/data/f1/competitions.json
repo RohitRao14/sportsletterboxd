@@ -1,0 +1,11 @@
+[
+  {
+    "id": "f1-competition-formula-1-world-championship-2026",
+    "sport": "F1",
+    "name": "Formula 1 World Championship 2026",
+    "shortName": "F1 2026",
+    "competitionType": "CHAMPIONSHIP",
+    "season": "2026",
+    "isActive": true
+  }
+]

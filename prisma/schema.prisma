@@ -1,0 +1,171 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Sport {
+  F1
+  FOOTBALL
+  NFL
+  CRICKET
+  NBA
+}
+
+enum EntityType {
+  F1_DRIVER
+  F1_CONSTRUCTOR
+  FOOTBALL_CLUB
+  FOOTBALL_NATIONAL_TEAM
+  CRICKET_TEAM
+  CRICKET_FRANCHISE
+  NFL_FRANCHISE
+  NBA_FRANCHISE
+}
+
+enum CompetitionType {
+  LEAGUE
+  CUP
+  TOURNAMENT
+  CHAMPIONSHIP
+  SERIES
+}
+
+enum EventStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELLED
+  POSTPONED
+}
+
+enum ParticipantRole {
+  DRIVER
+  CONSTRUCTOR
+  HOME_TEAM
+  AWAY_TEAM
+  TEAM_A
+  TEAM_B
+}
+
+enum ViewingMethod {
+  STREAM
+  IN_PERSON
+}
+
+model Entity {
+  id           String     @id
+  sport        Sport
+  entityType   EntityType
+  name         String
+  shortName    String?
+  country      String?
+  isActive     Boolean    @default(true)
+  metadata     Json?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  participants EventParticipant[]
+
+  @@index([sport])
+  @@index([entityType])
+  @@index([sport, entityType])
+  @@map("entities")
+}
+
+model Circuit {
+  id        String  @id
+  name      String
+  city      String?
+  country   String
+  lapLength Float?
+
+  @@map("circuits")
+}
+
+model Competition {
+  id              String          @id
+  sport           Sport
+  name            String
+  shortName       String?
+  competitionType CompetitionType
+  season          String
+  isActive        Boolean         @default(true)
+  metadata        Json?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  events Event[]
+
+  @@index([sport])
+  @@index([sport, season])
+  @@map("competitions")
+}
+
+model Event {
+  id            String      @id
+  sport         Sport
+  competitionId String
+  name          String
+  shortName     String?
+  startTime     DateTime?
+  venue         String?
+  city          String?
+  country       String?
+  season        String
+  sportMeta     Json?
+  status        EventStatus @default(SCHEDULED)
+  isManual      Boolean     @default(false)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  competition  Competition        @relation(fields: [competitionId], references: [id])
+  participants EventParticipant[]
+  diaryEntry   DiaryEntry?
+
+  @@index([sport])
+  @@index([competitionId])
+  @@index([startTime])
+  @@index([season])
+  @@index([sport, season])
+  @@map("events")
+}
+
+model EventParticipant {
+  id       String          @id @default(cuid())
+  eventId  String
+  entityId String
+  role     ParticipantRole
+  result   Json?
+
+  event  Event  @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  entity Entity @relation(fields: [entityId], references: [id])
+
+  @@unique([eventId, entityId, role])
+  @@index([eventId])
+  @@index([entityId])
+  @@map("event_participants")
+}
+
+model DiaryEntry {
+  id            String        @id @default(cuid())
+  eventId       String        @unique
+  rating        Int
+  viewingMethod ViewingMethod
+  notes         String?
+  watchedAt     DateTime
+  loggedAt      DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  sport         Sport
+  season        String
+
+  event Event @relation(fields: [eventId], references: [id])
+
+  @@index([sport])
+  @@index([rating])
+  @@index([watchedAt])
+  @@index([viewingMethod])
+  @@index([season])
+  @@map("diary_entries")
+}

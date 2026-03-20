@@ -1,0 +1,5 @@
+[
+  { "id": "nba-competition-nba-season-2025-26", "sport": "NBA", "name": "NBA 2025-26 Season", "shortName": "NBA 2025-26", "competitionType": "LEAGUE", "season": "2025-26", "isActive": true },
+  { "id": "nba-competition-nba-playoffs-2026", "sport": "NBA", "name": "NBA Playoffs 2026", "shortName": "NBA Playoffs 2026", "competitionType": "TOURNAMENT", "season": "2025-26", "isActive": true },
+  { "id": "nba-competition-nba-finals-2026", "sport": "NBA", "name": "NBA Finals 2026", "shortName": "NBA Finals 2026", "competitionType": "CHAMPIONSHIP", "season": "2025-26", "isActive": true }
+]

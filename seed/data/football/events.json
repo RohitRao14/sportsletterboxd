@@ -1,0 +1,1511 @@
+[
+  {
+    "id": "football-2025-26-pl-arsenal-vs-chelsea",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Arsenal vs Chelsea",
+    "shortName": "Arsenal vs Chelsea",
+    "startTime": "2025-10-06T16:30:00Z",
+    "venue": "Emirates Stadium",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-arsenal",
+      "awayTeam": "football-club-chelsea",
+      "participantNames": ["Arsenal", "Chelsea", "AFC", "CFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-arsenal", "role": "HOME_TEAM" },
+      { "entityId": "football-club-chelsea", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-manchester-city-vs-manchester-united",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Manchester City vs Manchester United",
+    "shortName": "Man City vs Man Utd",
+    "startTime": "2025-12-14T16:30:00Z",
+    "venue": "Etihad Stadium",
+    "city": "Manchester",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-manchester-city",
+      "awayTeam": "football-club-manchester-united",
+      "participantNames": ["Manchester City", "Manchester United", "Man City", "Man Utd"]
+    },
+    "participants": [
+      { "entityId": "football-club-manchester-city", "role": "HOME_TEAM" },
+      { "entityId": "football-club-manchester-united", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-liverpool-vs-arsenal",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Liverpool vs Arsenal",
+    "shortName": "Liverpool vs Arsenal",
+    "startTime": "2025-11-09T16:30:00Z",
+    "venue": "Anfield",
+    "city": "Liverpool",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-liverpool",
+      "awayTeam": "football-club-arsenal",
+      "participantNames": ["Liverpool", "Arsenal", "LFC", "AFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-liverpool", "role": "HOME_TEAM" },
+      { "entityId": "football-club-arsenal", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-arsenal-vs-liverpool",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Arsenal vs Liverpool",
+    "shortName": "Arsenal vs Liverpool",
+    "startTime": "2026-02-01T17:30:00Z",
+    "venue": "Emirates Stadium",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-arsenal",
+      "awayTeam": "football-club-liverpool",
+      "participantNames": ["Arsenal", "Liverpool", "AFC", "LFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-arsenal", "role": "HOME_TEAM" },
+      { "entityId": "football-club-liverpool", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-tottenham-vs-arsenal",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Tottenham Hotspur vs Arsenal",
+    "shortName": "Spurs vs Arsenal",
+    "startTime": "2025-11-30T16:30:00Z",
+    "venue": "Tottenham Hotspur Stadium",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-tottenham-hotspur",
+      "awayTeam": "football-club-arsenal",
+      "participantNames": ["Tottenham Hotspur", "Arsenal", "Spurs", "AFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-tottenham-hotspur", "role": "HOME_TEAM" },
+      { "entityId": "football-club-arsenal", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-arsenal-vs-tottenham",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Arsenal vs Tottenham Hotspur",
+    "shortName": "Arsenal vs Spurs",
+    "startTime": "2026-04-26T14:00:00Z",
+    "venue": "Emirates Stadium",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-arsenal",
+      "awayTeam": "football-club-tottenham-hotspur",
+      "participantNames": ["Arsenal", "Tottenham Hotspur", "AFC", "Spurs"]
+    },
+    "participants": [
+      { "entityId": "football-club-arsenal", "role": "HOME_TEAM" },
+      { "entityId": "football-club-tottenham-hotspur", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-manchester-united-vs-liverpool",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Manchester United vs Liverpool",
+    "shortName": "Man Utd vs Liverpool",
+    "startTime": "2026-01-18T16:30:00Z",
+    "venue": "Old Trafford",
+    "city": "Manchester",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-manchester-united",
+      "awayTeam": "football-club-liverpool",
+      "participantNames": ["Manchester United", "Liverpool", "Man Utd", "LFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-manchester-united", "role": "HOME_TEAM" },
+      { "entityId": "football-club-liverpool", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-chelsea-vs-manchester-city",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Chelsea vs Manchester City",
+    "shortName": "Chelsea vs Man City",
+    "startTime": "2025-09-28T16:30:00Z",
+    "venue": "Stamford Bridge",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-chelsea",
+      "awayTeam": "football-club-manchester-city",
+      "participantNames": ["Chelsea", "Manchester City", "CFC", "Man City"]
+    },
+    "participants": [
+      { "entityId": "football-club-chelsea", "role": "HOME_TEAM" },
+      { "entityId": "football-club-manchester-city", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-liverpool-vs-manchester-city",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Liverpool vs Manchester City",
+    "shortName": "Liverpool vs Man City",
+    "startTime": "2025-10-25T12:30:00Z",
+    "venue": "Anfield",
+    "city": "Liverpool",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-liverpool",
+      "awayTeam": "football-club-manchester-city",
+      "participantNames": ["Liverpool", "Manchester City", "LFC", "Man City"]
+    },
+    "participants": [
+      { "entityId": "football-club-liverpool", "role": "HOME_TEAM" },
+      { "entityId": "football-club-manchester-city", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-newcastle-vs-liverpool",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Newcastle United vs Liverpool",
+    "shortName": "Newcastle vs Liverpool",
+    "startTime": "2025-12-07T17:30:00Z",
+    "venue": "St. James' Park",
+    "city": "Newcastle",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-newcastle-united",
+      "awayTeam": "football-club-liverpool",
+      "participantNames": ["Newcastle United", "Liverpool", "Newcastle", "LFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-newcastle-united", "role": "HOME_TEAM" },
+      { "entityId": "football-club-liverpool", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-chelsea-vs-tottenham",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Chelsea vs Tottenham Hotspur",
+    "shortName": "Chelsea vs Spurs",
+    "startTime": "2025-11-23T16:30:00Z",
+    "venue": "Stamford Bridge",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-chelsea",
+      "awayTeam": "football-club-tottenham-hotspur",
+      "participantNames": ["Chelsea", "Tottenham Hotspur", "CFC", "Spurs"]
+    },
+    "participants": [
+      { "entityId": "football-club-chelsea", "role": "HOME_TEAM" },
+      { "entityId": "football-club-tottenham-hotspur", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-manchester-city-vs-arsenal",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Manchester City vs Arsenal",
+    "shortName": "Man City vs Arsenal",
+    "startTime": "2026-02-22T16:30:00Z",
+    "venue": "Etihad Stadium",
+    "city": "Manchester",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-manchester-city",
+      "awayTeam": "football-club-arsenal",
+      "participantNames": ["Manchester City", "Arsenal", "Man City", "AFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-manchester-city", "role": "HOME_TEAM" },
+      { "entityId": "football-club-arsenal", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-everton-vs-liverpool",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Everton vs Liverpool",
+    "shortName": "Everton vs Liverpool",
+    "startTime": "2025-10-19T12:30:00Z",
+    "venue": "Goodison Park",
+    "city": "Liverpool",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-everton",
+      "awayTeam": "football-club-liverpool",
+      "participantNames": ["Everton", "Liverpool", "EFC", "LFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-everton", "role": "HOME_TEAM" },
+      { "entityId": "football-club-liverpool", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-aston-villa-vs-chelsea",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Aston Villa vs Chelsea",
+    "shortName": "Aston Villa vs Chelsea",
+    "startTime": "2025-09-21T14:00:00Z",
+    "venue": "Villa Park",
+    "city": "Birmingham",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-aston-villa",
+      "awayTeam": "football-club-chelsea",
+      "participantNames": ["Aston Villa", "Chelsea", "AVFC", "CFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-aston-villa", "role": "HOME_TEAM" },
+      { "entityId": "football-club-chelsea", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-west-ham-vs-arsenal",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "West Ham United vs Arsenal",
+    "shortName": "West Ham vs Arsenal",
+    "startTime": "2026-03-08T14:00:00Z",
+    "venue": "London Stadium",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-west-ham-united",
+      "awayTeam": "football-club-arsenal",
+      "participantNames": ["West Ham United", "Arsenal", "West Ham", "AFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-west-ham-united", "role": "HOME_TEAM" },
+      { "entityId": "football-club-arsenal", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-newcastle-vs-manchester-city",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Newcastle United vs Manchester City",
+    "shortName": "Newcastle vs Man City",
+    "startTime": "2026-01-04T15:00:00Z",
+    "venue": "St. James' Park",
+    "city": "Newcastle",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-newcastle-united",
+      "awayTeam": "football-club-manchester-city",
+      "participantNames": ["Newcastle United", "Manchester City", "Newcastle", "Man City"]
+    },
+    "participants": [
+      { "entityId": "football-club-newcastle-united", "role": "HOME_TEAM" },
+      { "entityId": "football-club-manchester-city", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-nottingham-forest-vs-manchester-united",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Nottingham Forest vs Manchester United",
+    "shortName": "Nott'm Forest vs Man Utd",
+    "startTime": "2025-10-18T15:00:00Z",
+    "venue": "City Ground",
+    "city": "Nottingham",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-nottingham-forest",
+      "awayTeam": "football-club-manchester-united",
+      "participantNames": ["Nottingham Forest", "Manchester United", "Forest", "Man Utd"]
+    },
+    "participants": [
+      { "entityId": "football-club-nottingham-forest", "role": "HOME_TEAM" },
+      { "entityId": "football-club-manchester-united", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-manchester-united-vs-manchester-city",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Manchester United vs Manchester City",
+    "shortName": "Man Utd vs Man City",
+    "startTime": "2026-03-08T17:30:00Z",
+    "venue": "Old Trafford",
+    "city": "Manchester",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-manchester-united",
+      "awayTeam": "football-club-manchester-city",
+      "participantNames": ["Manchester United", "Manchester City", "Man Utd", "Man City"]
+    },
+    "participants": [
+      { "entityId": "football-club-manchester-united", "role": "HOME_TEAM" },
+      { "entityId": "football-club-manchester-city", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-brighton-vs-chelsea",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Brighton vs Chelsea",
+    "shortName": "Brighton vs Chelsea",
+    "startTime": "2025-12-21T15:00:00Z",
+    "venue": "Amex Stadium",
+    "city": "Brighton",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-brighton",
+      "awayTeam": "football-club-chelsea",
+      "participantNames": ["Brighton", "Chelsea", "BHAFC", "CFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-brighton", "role": "HOME_TEAM" },
+      { "entityId": "football-club-chelsea", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-aston-villa-vs-liverpool",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Aston Villa vs Liverpool",
+    "shortName": "Aston Villa vs Liverpool",
+    "startTime": "2025-11-02T16:30:00Z",
+    "venue": "Villa Park",
+    "city": "Birmingham",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-aston-villa",
+      "awayTeam": "football-club-liverpool",
+      "participantNames": ["Aston Villa", "Liverpool", "AVFC", "LFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-aston-villa", "role": "HOME_TEAM" },
+      { "entityId": "football-club-liverpool", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-chelsea-vs-arsenal",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Chelsea vs Arsenal",
+    "shortName": "Chelsea vs Arsenal",
+    "startTime": "2026-02-15T16:30:00Z",
+    "venue": "Stamford Bridge",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-chelsea",
+      "awayTeam": "football-club-arsenal",
+      "participantNames": ["Chelsea", "Arsenal", "CFC", "AFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-chelsea", "role": "HOME_TEAM" },
+      { "entityId": "football-club-arsenal", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-manchester-city-vs-liverpool",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Manchester City vs Liverpool",
+    "shortName": "Man City vs Liverpool",
+    "startTime": "2026-04-05T16:30:00Z",
+    "venue": "Etihad Stadium",
+    "city": "Manchester",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-manchester-city",
+      "awayTeam": "football-club-liverpool",
+      "participantNames": ["Manchester City", "Liverpool", "Man City", "LFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-manchester-city", "role": "HOME_TEAM" },
+      { "entityId": "football-club-liverpool", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-tottenham-vs-chelsea",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Tottenham Hotspur vs Chelsea",
+    "shortName": "Spurs vs Chelsea",
+    "startTime": "2026-03-22T16:30:00Z",
+    "venue": "Tottenham Hotspur Stadium",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-tottenham-hotspur",
+      "awayTeam": "football-club-chelsea",
+      "participantNames": ["Tottenham Hotspur", "Chelsea", "Spurs", "CFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-tottenham-hotspur", "role": "HOME_TEAM" },
+      { "entityId": "football-club-chelsea", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-newcastle-vs-tottenham",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Newcastle United vs Tottenham Hotspur",
+    "shortName": "Newcastle vs Spurs",
+    "startTime": "2026-01-25T15:00:00Z",
+    "venue": "St. James' Park",
+    "city": "Newcastle",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-newcastle-united",
+      "awayTeam": "football-club-tottenham-hotspur",
+      "participantNames": ["Newcastle United", "Tottenham Hotspur", "Newcastle", "Spurs"]
+    },
+    "participants": [
+      { "entityId": "football-club-newcastle-united", "role": "HOME_TEAM" },
+      { "entityId": "football-club-tottenham-hotspur", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-pl-liverpool-vs-chelsea",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-premier-league-2025-26",
+    "name": "Liverpool vs Chelsea",
+    "shortName": "Liverpool vs Chelsea",
+    "startTime": "2026-04-19T16:30:00Z",
+    "venue": "Anfield",
+    "city": "Liverpool",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-liverpool",
+      "awayTeam": "football-club-chelsea",
+      "participantNames": ["Liverpool", "Chelsea", "LFC", "CFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-liverpool", "role": "HOME_TEAM" },
+      { "entityId": "football-club-chelsea", "role": "AWAY_TEAM" }
+    ]
+  },
+
+  {
+    "id": "football-2025-26-laliga-el-clasico-1",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-la-liga-2025-26",
+    "name": "Real Madrid vs Barcelona",
+    "shortName": "El Clasico",
+    "startTime": "2025-10-26T20:00:00Z",
+    "venue": "Santiago Bernabeu",
+    "city": "Madrid",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-real-madrid",
+      "awayTeam": "football-club-barcelona",
+      "participantNames": ["Real Madrid", "Barcelona", "Real Madrid CF", "FC Barcelona"]
+    },
+    "participants": [
+      { "entityId": "football-club-real-madrid", "role": "HOME_TEAM" },
+      { "entityId": "football-club-barcelona", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-laliga-el-clasico-2",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-la-liga-2025-26",
+    "name": "Barcelona vs Real Madrid",
+    "shortName": "El Clasico",
+    "startTime": "2026-04-05T20:00:00Z",
+    "venue": "Spotify Camp Nou",
+    "city": "Barcelona",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-barcelona",
+      "awayTeam": "football-club-real-madrid",
+      "participantNames": ["Barcelona", "Real Madrid", "FC Barcelona", "Real Madrid CF"]
+    },
+    "participants": [
+      { "entityId": "football-club-barcelona", "role": "HOME_TEAM" },
+      { "entityId": "football-club-real-madrid", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-laliga-atletico-vs-real-madrid",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-la-liga-2025-26",
+    "name": "Atletico Madrid vs Real Madrid",
+    "shortName": "Atletico vs Real Madrid",
+    "startTime": "2025-09-28T20:00:00Z",
+    "venue": "Civitas Metropolitano",
+    "city": "Madrid",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-atletico-madrid",
+      "awayTeam": "football-club-real-madrid",
+      "participantNames": ["Atletico Madrid", "Real Madrid", "Atletico", "Real Madrid CF"]
+    },
+    "participants": [
+      { "entityId": "football-club-atletico-madrid", "role": "HOME_TEAM" },
+      { "entityId": "football-club-real-madrid", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-laliga-barcelona-vs-atletico",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-la-liga-2025-26",
+    "name": "Barcelona vs Atletico Madrid",
+    "shortName": "Barca vs Atletico",
+    "startTime": "2025-12-21T20:00:00Z",
+    "venue": "Spotify Camp Nou",
+    "city": "Barcelona",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-barcelona",
+      "awayTeam": "football-club-atletico-madrid",
+      "participantNames": ["Barcelona", "Atletico Madrid", "Barca", "Atletico"]
+    },
+    "participants": [
+      { "entityId": "football-club-barcelona", "role": "HOME_TEAM" },
+      { "entityId": "football-club-atletico-madrid", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-laliga-real-madrid-vs-atletico",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-la-liga-2025-26",
+    "name": "Real Madrid vs Atletico Madrid",
+    "shortName": "Real Madrid vs Atletico",
+    "startTime": "2026-02-08T20:00:00Z",
+    "venue": "Santiago Bernabeu",
+    "city": "Madrid",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-real-madrid",
+      "awayTeam": "football-club-atletico-madrid",
+      "participantNames": ["Real Madrid", "Atletico Madrid", "Real Madrid CF", "Atletico"]
+    },
+    "participants": [
+      { "entityId": "football-club-real-madrid", "role": "HOME_TEAM" },
+      { "entityId": "football-club-atletico-madrid", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-laliga-barcelona-vs-sevilla",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-la-liga-2025-26",
+    "name": "Barcelona vs Sevilla",
+    "shortName": "Barca vs Sevilla",
+    "startTime": "2025-11-09T20:00:00Z",
+    "venue": "Spotify Camp Nou",
+    "city": "Barcelona",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-barcelona",
+      "awayTeam": "football-club-sevilla",
+      "participantNames": ["Barcelona", "Sevilla", "Barca", "SFC"]
+    },
+    "participants": [
+      { "entityId": "football-club-barcelona", "role": "HOME_TEAM" },
+      { "entityId": "football-club-sevilla", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-laliga-real-madrid-vs-barcelona-copa",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-copa-del-rey-2025-26",
+    "name": "Real Madrid vs Barcelona",
+    "shortName": "Copa del Rey Final",
+    "startTime": "2026-05-02T20:00:00Z",
+    "venue": "Estadio de La Cartuja",
+    "city": "Seville",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-real-madrid",
+      "awayTeam": "football-club-barcelona",
+      "participantNames": ["Real Madrid", "Barcelona", "Real Madrid CF", "Barca"]
+    },
+    "participants": [
+      { "entityId": "football-club-real-madrid", "role": "HOME_TEAM" },
+      { "entityId": "football-club-barcelona", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-laliga-atletico-vs-barcelona",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-la-liga-2025-26",
+    "name": "Atletico Madrid vs Barcelona",
+    "shortName": "Atletico vs Barca",
+    "startTime": "2026-03-15T20:00:00Z",
+    "venue": "Civitas Metropolitano",
+    "city": "Madrid",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-atletico-madrid",
+      "awayTeam": "football-club-barcelona",
+      "participantNames": ["Atletico Madrid", "Barcelona", "Atletico", "Barca"]
+    },
+    "participants": [
+      { "entityId": "football-club-atletico-madrid", "role": "HOME_TEAM" },
+      { "entityId": "football-club-barcelona", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-laliga-sevilla-vs-real-madrid",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-la-liga-2025-26",
+    "name": "Sevilla vs Real Madrid",
+    "shortName": "Sevilla vs Real Madrid",
+    "startTime": "2026-01-11T20:00:00Z",
+    "venue": "Ramon Sanchez-Pizjuan",
+    "city": "Seville",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-sevilla",
+      "awayTeam": "football-club-real-madrid",
+      "participantNames": ["Sevilla", "Real Madrid", "SFC", "Real Madrid CF"]
+    },
+    "participants": [
+      { "entityId": "football-club-sevilla", "role": "HOME_TEAM" },
+      { "entityId": "football-club-real-madrid", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-laliga-villarreal-vs-barcelona",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-la-liga-2025-26",
+    "name": "Villarreal vs Barcelona",
+    "shortName": "Villarreal vs Barca",
+    "startTime": "2025-11-30T20:00:00Z",
+    "venue": "Estadio de la Ceramica",
+    "city": "Villarreal",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-villarreal",
+      "awayTeam": "football-club-barcelona",
+      "participantNames": ["Villarreal", "Barcelona", "Yellow Submarine", "Barca"]
+    },
+    "participants": [
+      { "entityId": "football-club-villarreal", "role": "HOME_TEAM" },
+      { "entityId": "football-club-barcelona", "role": "AWAY_TEAM" }
+    ]
+  },
+
+  {
+    "id": "football-2025-26-ucl-r16-liverpool-vs-real-madrid",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-champions-league-2025-26",
+    "name": "Liverpool vs Real Madrid",
+    "shortName": "Liverpool vs Real Madrid",
+    "startTime": "2026-02-18T20:00:00Z",
+    "venue": "Anfield",
+    "city": "Liverpool",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-liverpool",
+      "awayTeam": "football-club-real-madrid",
+      "participantNames": ["Liverpool", "Real Madrid", "LFC", "Real Madrid CF"],
+      "round": "Round of 16"
+    },
+    "participants": [
+      { "entityId": "football-club-liverpool", "role": "HOME_TEAM" },
+      { "entityId": "football-club-real-madrid", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-ucl-r16-real-madrid-vs-liverpool",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-champions-league-2025-26",
+    "name": "Real Madrid vs Liverpool",
+    "shortName": "Real Madrid vs Liverpool",
+    "startTime": "2026-03-11T20:00:00Z",
+    "venue": "Santiago Bernabeu",
+    "city": "Madrid",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-real-madrid",
+      "awayTeam": "football-club-liverpool",
+      "participantNames": ["Real Madrid", "Liverpool", "Real Madrid CF", "LFC"],
+      "round": "Round of 16"
+    },
+    "participants": [
+      { "entityId": "football-club-real-madrid", "role": "HOME_TEAM" },
+      { "entityId": "football-club-liverpool", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-ucl-r16-arsenal-vs-barcelona",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-champions-league-2025-26",
+    "name": "Arsenal vs Barcelona",
+    "shortName": "Arsenal vs Barca",
+    "startTime": "2026-02-25T20:00:00Z",
+    "venue": "Emirates Stadium",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-arsenal",
+      "awayTeam": "football-club-barcelona",
+      "participantNames": ["Arsenal", "Barcelona", "AFC", "Barca"],
+      "round": "Round of 16"
+    },
+    "participants": [
+      { "entityId": "football-club-arsenal", "role": "HOME_TEAM" },
+      { "entityId": "football-club-barcelona", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-ucl-qf-manchester-city-vs-bayern",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-champions-league-2025-26",
+    "name": "Manchester City vs Bayern Munich",
+    "shortName": "Man City vs Bayern",
+    "startTime": "2026-04-08T20:00:00Z",
+    "venue": "Etihad Stadium",
+    "city": "Manchester",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-manchester-city",
+      "awayTeam": "football-club-bayern-munich",
+      "participantNames": ["Manchester City", "Bayern Munich", "Man City", "Bayern"],
+      "round": "Quarter-final"
+    },
+    "participants": [
+      { "entityId": "football-club-manchester-city", "role": "HOME_TEAM" },
+      { "entityId": "football-club-bayern-munich", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-ucl-qf-inter-vs-atletico",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-champions-league-2025-26",
+    "name": "Inter Milan vs Atletico Madrid",
+    "shortName": "Inter vs Atletico",
+    "startTime": "2026-04-08T20:00:00Z",
+    "venue": "San Siro",
+    "city": "Milan",
+    "country": "Italy",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-inter-milan",
+      "awayTeam": "football-club-atletico-madrid",
+      "participantNames": ["Inter Milan", "Atletico Madrid", "Inter", "Atletico"],
+      "round": "Quarter-final"
+    },
+    "participants": [
+      { "entityId": "football-club-inter-milan", "role": "HOME_TEAM" },
+      { "entityId": "football-club-atletico-madrid", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-ucl-sf-real-madrid-vs-manchester-city",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-champions-league-2025-26",
+    "name": "Real Madrid vs Manchester City",
+    "shortName": "Real Madrid vs Man City",
+    "startTime": "2026-04-29T20:00:00Z",
+    "venue": "Santiago Bernabeu",
+    "city": "Madrid",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-real-madrid",
+      "awayTeam": "football-club-manchester-city",
+      "participantNames": ["Real Madrid", "Manchester City", "Real Madrid CF", "Man City"],
+      "round": "Semi-final"
+    },
+    "participants": [
+      { "entityId": "football-club-real-madrid", "role": "HOME_TEAM" },
+      { "entityId": "football-club-manchester-city", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-ucl-sf-liverpool-vs-inter",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-champions-league-2025-26",
+    "name": "Liverpool vs Inter Milan",
+    "shortName": "Liverpool vs Inter",
+    "startTime": "2026-04-30T20:00:00Z",
+    "venue": "Anfield",
+    "city": "Liverpool",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-liverpool",
+      "awayTeam": "football-club-inter-milan",
+      "participantNames": ["Liverpool", "Inter Milan", "LFC", "Inter"],
+      "round": "Semi-final"
+    },
+    "participants": [
+      { "entityId": "football-club-liverpool", "role": "HOME_TEAM" },
+      { "entityId": "football-club-inter-milan", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-ucl-final",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-champions-league-2025-26",
+    "name": "UEFA Champions League Final 2026",
+    "shortName": "UCL Final 2026",
+    "startTime": "2026-05-30T19:00:00Z",
+    "venue": "Allianz Arena",
+    "city": "Munich",
+    "country": "Germany",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": [],
+      "round": "Final"
+    },
+    "participants": []
+  },
+  {
+    "id": "football-2025-26-ucl-gs-psg-vs-borussia-dortmund",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-champions-league-2025-26",
+    "name": "Paris Saint-Germain vs Borussia Dortmund",
+    "shortName": "PSG vs Dortmund",
+    "startTime": "2025-10-22T20:00:00Z",
+    "venue": "Parc des Princes",
+    "city": "Paris",
+    "country": "France",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-paris-saint-germain",
+      "awayTeam": "football-club-borussia-dortmund",
+      "participantNames": ["Paris Saint-Germain", "Borussia Dortmund", "PSG", "Dortmund"],
+      "round": "Group Stage"
+    },
+    "participants": [
+      { "entityId": "football-club-paris-saint-germain", "role": "HOME_TEAM" },
+      { "entityId": "football-club-borussia-dortmund", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-ucl-gs-barcelona-vs-inter",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-champions-league-2025-26",
+    "name": "Barcelona vs Inter Milan",
+    "shortName": "Barca vs Inter",
+    "startTime": "2025-10-23T20:00:00Z",
+    "venue": "Spotify Camp Nou",
+    "city": "Barcelona",
+    "country": "Spain",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-barcelona",
+      "awayTeam": "football-club-inter-milan",
+      "participantNames": ["Barcelona", "Inter Milan", "Barca", "Inter"],
+      "round": "Group Stage"
+    },
+    "participants": [
+      { "entityId": "football-club-barcelona", "role": "HOME_TEAM" },
+      { "entityId": "football-club-inter-milan", "role": "AWAY_TEAM" }
+    ]
+  },
+
+  {
+    "id": "football-2026-wc-argentina-vs-france",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "Argentina vs France",
+    "shortName": "Argentina vs France",
+    "startTime": "2026-06-15T21:00:00Z",
+    "venue": "MetLife Stadium",
+    "city": "East Rutherford",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-argentina",
+      "awayTeam": "football-national-team-france",
+      "participantNames": ["Argentina", "France", "ARG", "FRA"],
+      "round": "Group Stage"
+    },
+    "participants": [
+      { "entityId": "football-national-team-argentina", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-france", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-brazil-vs-germany",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "Brazil vs Germany",
+    "shortName": "Brazil vs Germany",
+    "startTime": "2026-06-16T18:00:00Z",
+    "venue": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-brazil",
+      "awayTeam": "football-national-team-germany",
+      "participantNames": ["Brazil", "Germany", "BRA", "GER"],
+      "round": "Group Stage"
+    },
+    "participants": [
+      { "entityId": "football-national-team-brazil", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-germany", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-england-vs-spain",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "England vs Spain",
+    "shortName": "England vs Spain",
+    "startTime": "2026-06-18T21:00:00Z",
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-england",
+      "awayTeam": "football-national-team-spain",
+      "participantNames": ["England", "Spain", "ENG", "ESP"],
+      "round": "Group Stage"
+    },
+    "participants": [
+      { "entityId": "football-national-team-england", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-spain", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-usa-vs-mexico",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "USA vs Mexico",
+    "shortName": "USA vs Mexico",
+    "startTime": "2026-06-19T19:00:00Z",
+    "venue": "Estadio Azteca",
+    "city": "Mexico City",
+    "country": "Mexico",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-usa",
+      "awayTeam": "football-national-team-mexico",
+      "participantNames": ["USA", "Mexico", "USMNT", "MEX"],
+      "round": "Group Stage"
+    },
+    "participants": [
+      { "entityId": "football-national-team-usa", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-mexico", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-portugal-vs-argentina",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "Portugal vs Argentina",
+    "shortName": "Portugal vs Argentina",
+    "startTime": "2026-06-21T21:00:00Z",
+    "venue": "Levi's Stadium",
+    "city": "Santa Clara",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-portugal",
+      "awayTeam": "football-national-team-argentina",
+      "participantNames": ["Portugal", "Argentina", "POR", "ARG"],
+      "round": "Group Stage"
+    },
+    "participants": [
+      { "entityId": "football-national-team-portugal", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-argentina", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-japan-vs-spain",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "Japan vs Spain",
+    "shortName": "Japan vs Spain",
+    "startTime": "2026-06-23T18:00:00Z",
+    "venue": "Gillette Stadium",
+    "city": "Boston",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-japan",
+      "awayTeam": "football-national-team-spain",
+      "participantNames": ["Japan", "Spain", "JPN", "ESP"],
+      "round": "Group Stage"
+    },
+    "participants": [
+      { "entityId": "football-national-team-japan", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-spain", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-morocco-vs-brazil",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "Morocco vs Brazil",
+    "shortName": "Morocco vs Brazil",
+    "startTime": "2026-06-24T21:00:00Z",
+    "venue": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-morocco",
+      "awayTeam": "football-national-team-brazil",
+      "participantNames": ["Morocco", "Brazil", "MAR", "BRA"],
+      "round": "Group Stage"
+    },
+    "participants": [
+      { "entityId": "football-national-team-morocco", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-brazil", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-france-vs-portugal-qf",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "France vs Portugal",
+    "shortName": "France vs Portugal",
+    "startTime": "2026-07-04T21:00:00Z",
+    "venue": "Allegiant Stadium",
+    "city": "Las Vegas",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-france",
+      "awayTeam": "football-national-team-portugal",
+      "participantNames": ["France", "Portugal", "FRA", "POR"],
+      "round": "Quarter-final"
+    },
+    "participants": [
+      { "entityId": "football-national-team-france", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-portugal", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-brazil-vs-england-qf",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "Brazil vs England",
+    "shortName": "Brazil vs England",
+    "startTime": "2026-07-05T21:00:00Z",
+    "venue": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-brazil",
+      "awayTeam": "football-national-team-england",
+      "participantNames": ["Brazil", "England", "BRA", "ENG"],
+      "round": "Quarter-final"
+    },
+    "participants": [
+      { "entityId": "football-national-team-brazil", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-england", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-argentina-vs-spain-qf",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "Argentina vs Spain",
+    "shortName": "Argentina vs Spain",
+    "startTime": "2026-07-06T21:00:00Z",
+    "venue": "MetLife Stadium",
+    "city": "East Rutherford",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-argentina",
+      "awayTeam": "football-national-team-spain",
+      "participantNames": ["Argentina", "Spain", "ARG", "ESP"],
+      "round": "Quarter-final"
+    },
+    "participants": [
+      { "entityId": "football-national-team-argentina", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-spain", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-sf-france-vs-brazil",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "France vs Brazil",
+    "shortName": "France vs Brazil",
+    "startTime": "2026-07-09T21:00:00Z",
+    "venue": "MetLife Stadium",
+    "city": "East Rutherford",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-france",
+      "awayTeam": "football-national-team-brazil",
+      "participantNames": ["France", "Brazil", "FRA", "BRA"],
+      "round": "Semi-final"
+    },
+    "participants": [
+      { "entityId": "football-national-team-france", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-brazil", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-sf-argentina-vs-germany",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "Argentina vs Germany",
+    "shortName": "Argentina vs Germany",
+    "startTime": "2026-07-10T21:00:00Z",
+    "venue": "AT&T Stadium",
+    "city": "Dallas",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-argentina",
+      "awayTeam": "football-national-team-germany",
+      "participantNames": ["Argentina", "Germany", "ARG", "GER"],
+      "round": "Semi-final"
+    },
+    "participants": [
+      { "entityId": "football-national-team-argentina", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-germany", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2026-wc-third-place",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "FIFA World Cup 2026 Third Place Play-off",
+    "shortName": "WC 2026 3rd Place",
+    "startTime": "2026-07-14T19:00:00Z",
+    "venue": "Hard Rock Stadium",
+    "city": "Miami",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": [],
+      "round": "Third Place Play-off"
+    },
+    "participants": []
+  },
+  {
+    "id": "football-2026-wc-final",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "FIFA World Cup 2026 Final",
+    "shortName": "WC 2026 Final",
+    "startTime": "2026-07-19T19:00:00Z",
+    "venue": "MetLife Stadium",
+    "city": "East Rutherford",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": [],
+      "round": "Final"
+    },
+    "participants": []
+  },
+  {
+    "id": "football-2026-wc-colombia-vs-netherlands",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-world-cup-2026",
+    "name": "Colombia vs Netherlands",
+    "shortName": "Colombia vs Netherlands",
+    "startTime": "2026-06-20T18:00:00Z",
+    "venue": "SoFi Stadium",
+    "city": "Los Angeles",
+    "country": "USA",
+    "season": "2026",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-national-team-colombia",
+      "awayTeam": "football-national-team-netherlands",
+      "participantNames": ["Colombia", "Netherlands", "COL", "NED"],
+      "round": "Group Stage"
+    },
+    "participants": [
+      { "entityId": "football-national-team-colombia", "role": "HOME_TEAM" },
+      { "entityId": "football-national-team-netherlands", "role": "AWAY_TEAM" }
+    ]
+  },
+
+  {
+    "id": "football-2025-26-fa-cup-r3-arsenal-vs-manchester-united",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-fa-cup-2025-26",
+    "name": "Arsenal vs Manchester United",
+    "shortName": "Arsenal vs Man Utd",
+    "startTime": "2026-01-11T15:00:00Z",
+    "venue": "Emirates Stadium",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-arsenal",
+      "awayTeam": "football-club-manchester-united",
+      "participantNames": ["Arsenal", "Manchester United", "AFC", "Man Utd"],
+      "round": "Third Round"
+    },
+    "participants": [
+      { "entityId": "football-club-arsenal", "role": "HOME_TEAM" },
+      { "entityId": "football-club-manchester-united", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-fa-cup-r4-chelsea-vs-liverpool",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-fa-cup-2025-26",
+    "name": "Chelsea vs Liverpool",
+    "shortName": "Chelsea vs Liverpool",
+    "startTime": "2026-02-01T15:00:00Z",
+    "venue": "Stamford Bridge",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-chelsea",
+      "awayTeam": "football-club-liverpool",
+      "participantNames": ["Chelsea", "Liverpool", "CFC", "LFC"],
+      "round": "Fourth Round"
+    },
+    "participants": [
+      { "entityId": "football-club-chelsea", "role": "HOME_TEAM" },
+      { "entityId": "football-club-liverpool", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-fa-cup-qf-manchester-city-vs-newcastle",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-fa-cup-2025-26",
+    "name": "Manchester City vs Newcastle United",
+    "shortName": "Man City vs Newcastle",
+    "startTime": "2026-03-21T17:30:00Z",
+    "venue": "Etihad Stadium",
+    "city": "Manchester",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-manchester-city",
+      "awayTeam": "football-club-newcastle-united",
+      "participantNames": ["Manchester City", "Newcastle United", "Man City", "Newcastle"],
+      "round": "Quarter-final"
+    },
+    "participants": [
+      { "entityId": "football-club-manchester-city", "role": "HOME_TEAM" },
+      { "entityId": "football-club-newcastle-united", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-fa-cup-sf-arsenal-vs-chelsea",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-fa-cup-2025-26",
+    "name": "Arsenal vs Chelsea",
+    "shortName": "Arsenal vs Chelsea",
+    "startTime": "2026-04-18T15:00:00Z",
+    "venue": "Wembley Stadium",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "homeTeam": "football-club-arsenal",
+      "awayTeam": "football-club-chelsea",
+      "participantNames": ["Arsenal", "Chelsea", "AFC", "CFC"],
+      "round": "Semi-final"
+    },
+    "participants": [
+      { "entityId": "football-club-arsenal", "role": "HOME_TEAM" },
+      { "entityId": "football-club-chelsea", "role": "AWAY_TEAM" }
+    ]
+  },
+  {
+    "id": "football-2025-26-fa-cup-final",
+    "sport": "FOOTBALL",
+    "competitionId": "football-competition-fa-cup-2025-26",
+    "name": "FA Cup Final 2026",
+    "shortName": "FA Cup Final",
+    "startTime": "2026-05-16T15:00:00Z",
+    "venue": "Wembley Stadium",
+    "city": "London",
+    "country": "England",
+    "season": "2025-26",
+    "status": "SCHEDULED",
+    "isManual": false,
+    "sportMeta": {
+      "participantNames": [],
+      "round": "Final"
+    },
+    "participants": []
+  }
+]

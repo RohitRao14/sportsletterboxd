@@ -1,0 +1,11 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "prisma generate && prisma migrate deploy && next build",
+  "env": {
+    "DATABASE_URL": "@database-url",
+    "DATABASE_URL_UNPOOLED": "@database-url-unpooled",
+    "ADMIN_PASSWORD_HASH": "@admin-password-hash",
+    "SESSION_SECRET": "@session-secret",
+    "NEXT_PUBLIC_APP_URL": "@next-public-app-url"
+  }
+}

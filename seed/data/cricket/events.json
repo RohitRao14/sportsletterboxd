@@ -1,0 +1,804 @@
+[
+  {
+    "id": "cricket-2025-ct-england-vs-australia",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "England vs Australia - ICC Champions Trophy 2025 Group A",
+    "shortName": "England vs Australia (CT)",
+    "startTime": "2025-02-22T09:30:00Z",
+    "venue": "National Stadium",
+    "city": "Karachi",
+    "country": "Pakistan",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["England", "Australia", "ENG", "AUS"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-england", "role": "TEAM_A" },
+      { "entityId": "cricket-team-australia", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-south-africa-vs-afghanistan",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "South Africa vs Afghanistan - ICC Champions Trophy 2025 Group A",
+    "shortName": "South Africa vs Afghanistan (CT)",
+    "startTime": "2025-02-23T09:30:00Z",
+    "venue": "Rawalpindi Cricket Stadium",
+    "city": "Rawalpindi",
+    "country": "Pakistan",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["South Africa", "Afghanistan", "SA", "AFG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-south-africa", "role": "TEAM_A" },
+      { "entityId": "cricket-team-afghanistan", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-australia-vs-south-africa",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "Australia vs South Africa - ICC Champions Trophy 2025 Group A",
+    "shortName": "Australia vs South Africa (CT)",
+    "startTime": "2025-02-25T09:30:00Z",
+    "venue": "Rawalpindi Cricket Stadium",
+    "city": "Rawalpindi",
+    "country": "Pakistan",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["Australia", "South Africa", "AUS", "SA"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-australia", "role": "TEAM_A" },
+      { "entityId": "cricket-team-south-africa", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-england-vs-afghanistan",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "England vs Afghanistan - ICC Champions Trophy 2025 Group A",
+    "shortName": "England vs Afghanistan (CT)",
+    "startTime": "2025-02-26T09:30:00Z",
+    "venue": "Gaddafi Stadium",
+    "city": "Lahore",
+    "country": "Pakistan",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["England", "Afghanistan", "ENG", "AFG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-england", "role": "TEAM_A" },
+      { "entityId": "cricket-team-afghanistan", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-australia-vs-england",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "Australia vs England - ICC Champions Trophy 2025 Group A",
+    "shortName": "Australia vs England (CT)",
+    "startTime": "2025-03-01T09:30:00Z",
+    "venue": "Gaddafi Stadium",
+    "city": "Lahore",
+    "country": "Pakistan",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["Australia", "England", "AUS", "ENG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-australia", "role": "TEAM_A" },
+      { "entityId": "cricket-team-england", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-south-africa-vs-england",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "South Africa vs England - ICC Champions Trophy 2025 Group A",
+    "shortName": "South Africa vs England (CT)",
+    "startTime": "2025-03-03T09:30:00Z",
+    "venue": "National Stadium",
+    "city": "Karachi",
+    "country": "Pakistan",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["South Africa", "England", "SA", "ENG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-south-africa", "role": "TEAM_A" },
+      { "entityId": "cricket-team-england", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-india-vs-pakistan",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "India vs Pakistan - ICC Champions Trophy 2025",
+    "shortName": "India vs Pakistan (CT)",
+    "startTime": "2025-03-01T09:30:00Z",
+    "venue": "Dubai International Cricket Stadium",
+    "city": "Dubai",
+    "country": "UAE",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["India", "Pakistan", "IND", "PAK"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-india", "role": "TEAM_A" },
+      { "entityId": "cricket-team-pakistan", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-india-vs-new-zealand",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "India vs New Zealand - ICC Champions Trophy 2025 Group B",
+    "shortName": "India vs New Zealand (CT)",
+    "startTime": "2025-03-02T09:30:00Z",
+    "venue": "Dubai International Cricket Stadium",
+    "city": "Dubai",
+    "country": "UAE",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["India", "New Zealand", "IND", "NZ"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-india", "role": "TEAM_A" },
+      { "entityId": "cricket-team-new-zealand", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-pakistan-vs-bangladesh",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "Pakistan vs Bangladesh - ICC Champions Trophy 2025 Group B",
+    "shortName": "Pakistan vs Bangladesh (CT)",
+    "startTime": "2025-02-27T09:30:00Z",
+    "venue": "Rawalpindi Cricket Stadium",
+    "city": "Rawalpindi",
+    "country": "Pakistan",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["Pakistan", "Bangladesh", "PAK", "BAN"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-pakistan", "role": "TEAM_A" },
+      { "entityId": "cricket-team-bangladesh", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-new-zealand-vs-bangladesh",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "New Zealand vs Bangladesh - ICC Champions Trophy 2025 Group B",
+    "shortName": "New Zealand vs Bangladesh (CT)",
+    "startTime": "2025-02-24T09:30:00Z",
+    "venue": "Rawalpindi Cricket Stadium",
+    "city": "Rawalpindi",
+    "country": "Pakistan",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["New Zealand", "Bangladesh", "NZ", "BAN"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-new-zealand", "role": "TEAM_A" },
+      { "entityId": "cricket-team-bangladesh", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-india-vs-bangladesh",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "India vs Bangladesh - ICC Champions Trophy 2025 Group B",
+    "shortName": "India vs Bangladesh (CT)",
+    "startTime": "2025-03-06T09:30:00Z",
+    "venue": "Dubai International Cricket Stadium",
+    "city": "Dubai",
+    "country": "UAE",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["India", "Bangladesh", "IND", "BAN"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-india", "role": "TEAM_A" },
+      { "entityId": "cricket-team-bangladesh", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-pakistan-vs-new-zealand",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "Pakistan vs New Zealand - ICC Champions Trophy 2025 Group B",
+    "shortName": "Pakistan vs New Zealand (CT)",
+    "startTime": "2025-03-05T09:30:00Z",
+    "venue": "Rawalpindi Cricket Stadium",
+    "city": "Rawalpindi",
+    "country": "Pakistan",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["Pakistan", "New Zealand", "PAK", "NZ"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-pakistan", "role": "TEAM_A" },
+      { "entityId": "cricket-team-new-zealand", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-semifinal-1",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "Semifinal 1 - ICC Champions Trophy 2025",
+    "shortName": "CT 2025 SF1",
+    "startTime": "2025-03-04T09:30:00Z",
+    "venue": "Gaddafi Stadium",
+    "city": "Lahore",
+    "country": "Pakistan",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["Australia", "South Africa", "AUS", "SA"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-australia", "role": "TEAM_A" },
+      { "entityId": "cricket-team-south-africa", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-semifinal-2",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "Semifinal 2 - ICC Champions Trophy 2025",
+    "shortName": "CT 2025 SF2",
+    "startTime": "2025-03-05T09:30:00Z",
+    "venue": "Dubai International Cricket Stadium",
+    "city": "Dubai",
+    "country": "UAE",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["India", "New Zealand", "IND", "NZ"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-india", "role": "TEAM_A" },
+      { "entityId": "cricket-team-new-zealand", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ct-final",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-icc-champions-trophy-2025",
+    "name": "Final - ICC Champions Trophy 2025",
+    "shortName": "CT 2025 Final",
+    "startTime": "2025-03-09T09:30:00Z",
+    "venue": "Dubai International Cricket Stadium",
+    "city": "Dubai",
+    "country": "UAE",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["India", "New Zealand", "IND", "NZ"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-india", "role": "TEAM_A" },
+      { "entityId": "cricket-team-new-zealand", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ipl-opener-mi-vs-csk",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "Mumbai Indians vs Chennai Super Kings - IPL 2026 Opening Match",
+    "shortName": "MI vs CSK (IPL Opener)",
+    "startTime": "2026-03-22T14:00:00Z",
+    "venue": "Wankhede Stadium",
+    "city": "Mumbai",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["Mumbai Indians", "Chennai Super Kings", "MI", "CSK"]
+    },
+    "participants": [
+      { "entityId": "cricket-franchise-mumbai-indians", "role": "TEAM_A" },
+      { "entityId": "cricket-franchise-chennai-super-kings", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ipl-rcb-vs-kkr",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "Royal Challengers Bengaluru vs Kolkata Knight Riders - IPL 2026",
+    "shortName": "RCB vs KKR",
+    "startTime": "2026-03-25T14:00:00Z",
+    "venue": "M. Chinnaswamy Stadium",
+    "city": "Bengaluru",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["Royal Challengers Bengaluru", "Kolkata Knight Riders", "RCB", "KKR"]
+    },
+    "participants": [
+      { "entityId": "cricket-franchise-royal-challengers-bengaluru", "role": "TEAM_A" },
+      { "entityId": "cricket-franchise-kolkata-knight-riders", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ipl-csk-vs-rcb",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "Chennai Super Kings vs Royal Challengers Bengaluru - IPL 2026",
+    "shortName": "CSK vs RCB",
+    "startTime": "2026-03-28T14:00:00Z",
+    "venue": "MA Chidambaram Stadium",
+    "city": "Chennai",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["Chennai Super Kings", "Royal Challengers Bengaluru", "CSK", "RCB"]
+    },
+    "participants": [
+      { "entityId": "cricket-franchise-chennai-super-kings", "role": "TEAM_A" },
+      { "entityId": "cricket-franchise-royal-challengers-bengaluru", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ipl-mi-vs-rcb",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "Mumbai Indians vs Royal Challengers Bengaluru - IPL 2026",
+    "shortName": "MI vs RCB",
+    "startTime": "2026-04-02T14:00:00Z",
+    "venue": "Wankhede Stadium",
+    "city": "Mumbai",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["Mumbai Indians", "Royal Challengers Bengaluru", "MI", "RCB"]
+    },
+    "participants": [
+      { "entityId": "cricket-franchise-mumbai-indians", "role": "TEAM_A" },
+      { "entityId": "cricket-franchise-royal-challengers-bengaluru", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ipl-kkr-vs-mi",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "Kolkata Knight Riders vs Mumbai Indians - IPL 2026",
+    "shortName": "KKR vs MI",
+    "startTime": "2026-04-05T14:00:00Z",
+    "venue": "Eden Gardens",
+    "city": "Kolkata",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["Kolkata Knight Riders", "Mumbai Indians", "KKR", "MI"]
+    },
+    "participants": [
+      { "entityId": "cricket-franchise-kolkata-knight-riders", "role": "TEAM_A" },
+      { "entityId": "cricket-franchise-mumbai-indians", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ipl-dc-vs-pbks",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "Delhi Capitals vs Punjab Kings - IPL 2026",
+    "shortName": "DC vs PBKS",
+    "startTime": "2026-04-07T14:00:00Z",
+    "venue": "Arun Jaitley Stadium",
+    "city": "Delhi",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["Delhi Capitals", "Punjab Kings", "DC", "PBKS"]
+    },
+    "participants": [
+      { "entityId": "cricket-franchise-delhi-capitals", "role": "TEAM_A" },
+      { "entityId": "cricket-franchise-punjab-kings", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ipl-rr-vs-srh",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "Rajasthan Royals vs Sunrisers Hyderabad - IPL 2026",
+    "shortName": "RR vs SRH",
+    "startTime": "2026-04-10T14:00:00Z",
+    "venue": "Sawai Mansingh Stadium",
+    "city": "Jaipur",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["Rajasthan Royals", "Sunrisers Hyderabad", "RR", "SRH"]
+    },
+    "participants": [
+      { "entityId": "cricket-franchise-rajasthan-royals", "role": "TEAM_A" },
+      { "entityId": "cricket-franchise-sunrisers-hyderabad", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ipl-lsg-vs-gt",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "Lucknow Super Giants vs Gujarat Titans - IPL 2026",
+    "shortName": "LSG vs GT",
+    "startTime": "2026-04-12T14:00:00Z",
+    "venue": "BRSABV Ekana Cricket Stadium",
+    "city": "Lucknow",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["Lucknow Super Giants", "Gujarat Titans", "LSG", "GT"]
+    },
+    "participants": [
+      { "entityId": "cricket-franchise-lucknow-super-giants", "role": "TEAM_A" },
+      { "entityId": "cricket-franchise-gujarat-titans", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ipl-csk-vs-mi",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "Chennai Super Kings vs Mumbai Indians - IPL 2026",
+    "shortName": "CSK vs MI",
+    "startTime": "2026-04-18T14:00:00Z",
+    "venue": "MA Chidambaram Stadium",
+    "city": "Chennai",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["Chennai Super Kings", "Mumbai Indians", "CSK", "MI"]
+    },
+    "participants": [
+      { "entityId": "cricket-franchise-chennai-super-kings", "role": "TEAM_A" },
+      { "entityId": "cricket-franchise-mumbai-indians", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ipl-qualifier-1",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "IPL 2026 Qualifier 1",
+    "shortName": "IPL 2026 Q1",
+    "startTime": "2026-05-19T14:00:00Z",
+    "venue": "Narendra Modi Stadium",
+    "city": "Ahmedabad",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["TBD", "TBD"]
+    },
+    "participants": []
+  },
+  {
+    "id": "cricket-2026-ipl-eliminator",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "IPL 2026 Eliminator",
+    "shortName": "IPL 2026 Elim",
+    "startTime": "2026-05-20T14:00:00Z",
+    "venue": "Eden Gardens",
+    "city": "Kolkata",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["TBD", "TBD"]
+    },
+    "participants": []
+  },
+  {
+    "id": "cricket-2026-ipl-qualifier-2",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "IPL 2026 Qualifier 2",
+    "shortName": "IPL 2026 Q2",
+    "startTime": "2026-05-22T14:00:00Z",
+    "venue": "Wankhede Stadium",
+    "city": "Mumbai",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["TBD", "TBD"]
+    },
+    "participants": []
+  },
+  {
+    "id": "cricket-2026-ipl-final",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-ipl-2026",
+    "name": "IPL 2026 Final",
+    "shortName": "IPL 2026 Final",
+    "startTime": "2026-05-25T14:00:00Z",
+    "venue": "Narendra Modi Stadium",
+    "city": "Ahmedabad",
+    "country": "India",
+    "season": "2026",
+    "status": "UPCOMING",
+    "isManual": false,
+    "sportMeta": {
+      "format": "T20",
+      "participantNames": ["TBD", "TBD"]
+    },
+    "participants": []
+  },
+  {
+    "id": "cricket-2025-ashes-test1",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-the-ashes-2025-26",
+    "name": "The Ashes 2025-26 - 1st Test",
+    "shortName": "Ashes 2025-26 1st Test",
+    "startTime": "2025-11-21T00:00:00Z",
+    "venue": "The Gabba",
+    "city": "Brisbane",
+    "country": "Australia",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "TEST",
+      "participantNames": ["Australia", "England", "AUS", "ENG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-australia", "role": "TEAM_A" },
+      { "entityId": "cricket-team-england", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ashes-test2",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-the-ashes-2025-26",
+    "name": "The Ashes 2025-26 - 2nd Test",
+    "shortName": "Ashes 2025-26 2nd Test",
+    "startTime": "2025-12-04T00:00:00Z",
+    "venue": "Adelaide Oval",
+    "city": "Adelaide",
+    "country": "Australia",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "TEST",
+      "participantNames": ["Australia", "England", "AUS", "ENG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-australia", "role": "TEAM_A" },
+      { "entityId": "cricket-team-england", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ashes-test3",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-the-ashes-2025-26",
+    "name": "The Ashes 2025-26 - 3rd Test",
+    "shortName": "Ashes 2025-26 3rd Test",
+    "startTime": "2025-12-14T00:00:00Z",
+    "venue": "Melbourne Cricket Ground",
+    "city": "Melbourne",
+    "country": "Australia",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "TEST",
+      "participantNames": ["Australia", "England", "AUS", "ENG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-australia", "role": "TEAM_A" },
+      { "entityId": "cricket-team-england", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ashes-test4",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-the-ashes-2025-26",
+    "name": "The Ashes 2025-26 - 4th Test",
+    "shortName": "Ashes 2025-26 4th Test",
+    "startTime": "2025-12-26T00:00:00Z",
+    "venue": "Melbourne Cricket Ground",
+    "city": "Melbourne",
+    "country": "Australia",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "TEST",
+      "participantNames": ["Australia", "England", "AUS", "ENG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-australia", "role": "TEAM_A" },
+      { "entityId": "cricket-team-england", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2026-ashes-test5",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-the-ashes-2025-26",
+    "name": "The Ashes 2025-26 - 5th Test",
+    "shortName": "Ashes 2025-26 5th Test",
+    "startTime": "2026-01-03T00:00:00Z",
+    "venue": "Sydney Cricket Ground",
+    "city": "Sydney",
+    "country": "Australia",
+    "season": "2025-26",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "TEST",
+      "participantNames": ["Australia", "England", "AUS", "ENG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-australia", "role": "TEAM_A" },
+      { "entityId": "cricket-team-england", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ind-eng-test1",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-india-england-tests-2025",
+    "name": "India vs England - 1st Test 2025",
+    "shortName": "IND vs ENG 1st Test",
+    "startTime": "2025-01-22T04:00:00Z",
+    "venue": "Rajiv Gandhi International Cricket Stadium",
+    "city": "Hyderabad",
+    "country": "India",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "TEST",
+      "participantNames": ["India", "England", "IND", "ENG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-india", "role": "TEAM_A" },
+      { "entityId": "cricket-team-england", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ind-eng-test3",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-india-england-tests-2025",
+    "name": "India vs England - 3rd Test 2025",
+    "shortName": "IND vs ENG 3rd Test",
+    "startTime": "2025-02-15T04:00:00Z",
+    "venue": "Niranjan Shah Stadium",
+    "city": "Rajkot",
+    "country": "India",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "TEST",
+      "participantNames": ["India", "England", "IND", "ENG"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-india", "role": "TEAM_A" },
+      { "entityId": "cricket-team-england", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ind-aus-odi1",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-india-australia-odis-2025",
+    "name": "India vs Australia - 1st ODI 2025",
+    "shortName": "IND vs AUS 1st ODI",
+    "startTime": "2025-09-21T09:30:00Z",
+    "venue": "MA Chidambaram Stadium",
+    "city": "Chennai",
+    "country": "India",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["India", "Australia", "IND", "AUS"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-india", "role": "TEAM_A" },
+      { "entityId": "cricket-team-australia", "role": "TEAM_B" }
+    ]
+  },
+  {
+    "id": "cricket-2025-ind-aus-odi3",
+    "sport": "CRICKET",
+    "competitionId": "cricket-competition-india-australia-odis-2025",
+    "name": "India vs Australia - 3rd ODI 2025",
+    "shortName": "IND vs AUS 3rd ODI",
+    "startTime": "2025-09-28T09:30:00Z",
+    "venue": "Wankhede Stadium",
+    "city": "Mumbai",
+    "country": "India",
+    "season": "2025",
+    "status": "COMPLETED",
+    "isManual": false,
+    "sportMeta": {
+      "format": "ODI",
+      "participantNames": ["India", "Australia", "IND", "AUS"]
+    },
+    "participants": [
+      { "entityId": "cricket-team-india", "role": "TEAM_A" },
+      { "entityId": "cricket-team-australia", "role": "TEAM_B" }
+    ]
+  }
+]
