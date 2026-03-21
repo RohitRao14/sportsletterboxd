@@ -387,9 +387,12 @@ function DiaryEntryCard({
                 {(entry.event.sportMeta as { format?: string })!.format}
               </span>
             )}
-            <span className="text-xs text-gray-500">
-              {entry.event.competition.shortName ?? entry.event.competition.name}
-            </span>
+            {(() => {
+              const compName = entry.event.competition.shortName ?? entry.event.competition.name;
+              return compName && !compName.startsWith("Manual") ? (
+                <span className="text-xs text-gray-500">{compName}</span>
+              ) : null;
+            })()}
           </div>
 
           <Link href={`/diary/${entry.id}`} className="group/link">
