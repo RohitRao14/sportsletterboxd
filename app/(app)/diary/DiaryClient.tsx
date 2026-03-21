@@ -22,6 +22,7 @@ interface Entity {
 interface Participant {
   entityId: string;
   role: string;
+  result: { score?: number } | null;
   entity: Entity;
 }
 
@@ -363,10 +364,16 @@ function DiaryEntryCard({
   onDelete: () => void;
   onEdit: () => void;
 }) {
-  const participants = entry.event.participants
-    .slice(0, 4)
-    .map((p) => p.entity.shortName ?? p.entity.name)
-    .join(" vs ");
+  const home = entry.event.participants.find(p => p.role === "HOME_TEAM");
+  const away = entry.event.participants.find(p => p.role === "AWAY_TEAM");
+  const homeScore = (home?.result as { score?: number } | null)?.score;
+  const awayScore = (away?.result as { score?: number } | null)?.score;
+  const hasScore = homeScore != null && awayScore != null;
+  const participants = home && away
+    ? hasScore
+      ? `${home.entity.shortName ?? home.entity.name} ${homeScore} – ${awayScore} ${away.entity.shortName ?? away.entity.name}`
+      : `${home.entity.shortName ?? home.entity.name} vs ${away.entity.shortName ?? away.entity.name}`
+    : entry.event.participants.slice(0, 4).map(p => p.entity.shortName ?? p.entity.name).join(" · ");
 
   return (
     <div className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl p-4 hover:border-[#3a3d4a] transition-colors group">

@@ -51,14 +51,19 @@ export default async function DiaryEntryPage({
         {/* Participants */}
         {event.participants.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
-            {event.participants.map((p) => (
-              <span
-                key={p.entityId}
-                className="text-sm text-gray-400 bg-white/5 px-2 py-0.5 rounded"
-              >
-                {p.entity.name}
-              </span>
-            ))}
+            {event.participants.map((p) => {
+              const isHome = p.role === "HOME_TEAM";
+              const isAway = p.role === "AWAY_TEAM";
+              const score = (p.result as { score?: number } | null)?.score;
+              return (
+                <span key={p.entityId} className="inline-flex items-center gap-1.5 text-sm text-white bg-white/5 px-3 py-1 rounded-lg">
+                  {isHome && <span className="text-xs text-blue-400 font-medium">H</span>}
+                  {isAway && <span className="text-xs text-gray-500 font-medium">A</span>}
+                  <span>{p.entity.name}</span>
+                  {score != null && <span className="text-gray-400 font-bold">{score}</span>}
+                </span>
+              );
+            })}
           </div>
         )}
 
