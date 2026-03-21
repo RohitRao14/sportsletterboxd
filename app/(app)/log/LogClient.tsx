@@ -208,7 +208,7 @@ export default function LogClient() {
 
   function buildEventName(): string {
     const myName = selectedTeam?.shortName ?? selectedTeam?.name ?? "My Team";
-    const oppName = selectedOpponent?.shortName ?? opponentQuery || "Opponent";
+    const oppName = (selectedOpponent?.shortName ?? selectedOpponent?.name) ?? (opponentQuery || "Opponent");
     const hasScores = myScore !== "" && oppScore !== "";
     if (hasScores) {
       return isHome
@@ -411,7 +411,7 @@ export default function LogClient() {
                 className="flex-1 bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none text-center" />
               <span className="text-gray-400 font-bold">–</span>
               <input type="number" min="0" value={oppScore} onChange={(e) => setOppScore(e.target.value)}
-                placeholder={selectedOpponent?.shortName ?? opponentQuery || "Opponent"}
+                placeholder={selectedOpponent?.shortName ?? (opponentQuery || "Opponent")}
                 className="flex-1 bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none text-center" />
             </div>
           </div>
