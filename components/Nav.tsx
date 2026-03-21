@@ -25,7 +25,7 @@ export function Nav() {
     <nav className="border-b border-[#2a2d3a] bg-[#0f1117]/80 backdrop-blur-sm sticky top-0 z-40">
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
         <Link href="/diary" className="font-bold text-white text-lg tracking-tight">
-          Sports <span className="text-blue-400">LB</span>
+          Box<span className="text-blue-400">Scord</span>
         </Link>
 
         <div className="flex items-center gap-1">
