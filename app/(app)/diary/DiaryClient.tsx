@@ -219,25 +219,31 @@ export default function DiaryClient() {
   return (
     <div>
       {/* Header */}
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="text-2xl font-bold text-white">My Diary</h1>
-          {data && (
-            <p className="text-gray-400 text-sm mt-0.5">
-              {data.total} {data.total === 1 ? "entry" : "entries"}
-              {hasActiveFilters ? " (filtered)" : ""}
-            </p>
-          )}
+      <div className="mb-6">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-bold text-white">My Diary</h1>
+            {data && (
+              <p className="text-gray-400 text-sm mt-0.5">
+                {data.total} {data.total === 1 ? "entry" : "entries"}
+                {hasActiveFilters ? " (filtered)" : ""}
+              </p>
+            )}
+          </div>
+          <Link
+            href="/log"
+            className="px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white transition-colors"
+          >
+            + Log
+          </Link>
         </div>
-        <div className="flex items-center gap-2">
-          {/* Mobile filter toggle */}
+        <div className="flex items-center gap-2 mt-3">
           <button
             onClick={() => setMobileFilterOpen(true)}
             className="lg:hidden px-3 py-2 rounded-lg text-sm bg-white/10 text-gray-300 hover:bg-white/20"
           >
             Filters {hasActiveFilters ? "●" : ""}
           </button>
-          {/* Sort */}
           <select
             value={`${filters.sortBy ?? "watchedAt"}-${filters.sortDir ?? "desc"}`}
             onChange={(e) => {
@@ -253,12 +259,6 @@ export default function DiaryClient() {
             <option value="rating-asc">Rating (lowest)</option>
             <option value="startTime-desc">Event date (newest)</option>
           </select>
-          <Link
-            href="/log"
-            className="px-4 py-2 rounded-lg text-sm font-medium bg-blue-600 hover:bg-blue-700 text-white transition-colors"
-          >
-            + Log
-          </Link>
         </div>
       </div>
 
@@ -411,7 +411,7 @@ function DiaryEntryCard({
           )}
         </div>
 
-        <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
+        <div className="flex gap-1 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity flex-shrink-0">
           <button
             onClick={onEdit}
             className="p-1.5 rounded text-gray-400 hover:text-white hover:bg-white/10 transition-colors text-xs"
