@@ -33,10 +33,10 @@ export function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+              className={`px-3 py-1.5 text-sm font-medium transition-colors border-b-2 ${
                 pathname?.startsWith(link.href)
-                  ? "bg-blue-600 text-white"
-                  : "text-gray-400 hover:text-white hover:bg-white/10"
+                  ? "border-blue-400 text-white"
+                  : "border-transparent text-gray-400 hover:text-white"
               }`}
             >
               {link.label}

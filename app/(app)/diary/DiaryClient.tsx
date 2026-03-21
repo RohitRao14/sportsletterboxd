@@ -325,7 +325,7 @@ export default function DiaryClient() {
       <div className="flex gap-6">
         {/* Desktop filter sidebar */}
         <aside className="hidden lg:block w-52 flex-shrink-0">
-          <div className="sticky top-20 bg-[#1a1d27] border border-[#2a2d3a] rounded-xl p-4">
+          <div className="sticky top-20 bg-white/5 backdrop-blur-sm border border-white/8 rounded-xl p-4">
             {FilterSidebar}
           </div>
         </aside>
@@ -337,7 +337,7 @@ export default function DiaryClient() {
               className="absolute inset-0 bg-black/60"
               onClick={() => setMobileFilterOpen(false)}
             />
-            <div className="absolute right-0 top-0 bottom-0 w-72 bg-[#1a1d27] border-l border-[#2a2d3a] p-4 overflow-y-auto">
+            <div className="absolute right-0 top-0 bottom-0 w-72 bg-black/70 backdrop-blur-md border-l border-white/10 p-4 overflow-y-auto">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="font-semibold text-white">Filters</h2>
                 <button
@@ -414,6 +414,14 @@ export default function DiaryClient() {
   );
 }
 
+const sportBorderColor: Record<string, string> = {
+  FOOTBALL: "border-l-green-500",
+  F1: "border-l-red-500",
+  CRICKET: "border-l-yellow-400",
+  NFL: "border-l-amber-500",
+  NBA: "border-l-orange-500",
+};
+
 function DiaryEntryCard({
   entry,
   onDelete,
@@ -428,16 +436,13 @@ function DiaryEntryCard({
   const homeScore = (home?.result as { scoreText?: string; score?: number } | null)?.scoreText ?? (home?.result as { score?: number } | null)?.score?.toString();
   const awayScore = (away?.result as { scoreText?: string; score?: number } | null)?.scoreText ?? (away?.result as { score?: number } | null)?.score?.toString();
   const hasScore = homeScore != null && awayScore != null;
-  const participants = home && away
-    ? hasScore
-      ? `${home.entity.shortName ?? home.entity.name} ${homeScore} – ${awayScore} ${away.entity.shortName ?? away.entity.name}`
-      : `${home.entity.shortName ?? home.entity.name} vs ${away.entity.shortName ?? away.entity.name}`
-    : entry.event.participants.slice(0, 4).map(p => p.entity.shortName ?? p.entity.name).join(" · ");
+  const borderCls = sportBorderColor[entry.sport] ?? "border-l-blue-500";
 
   return (
-    <div className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl p-4 hover:border-[#3a3d4a] transition-colors group">
+    <div className={`bg-white/5 backdrop-blur-sm border-t border-r border-b border-white/8 border-l-2 ${borderCls} rounded-xl p-4 hover:bg-white/8 transition-colors group`}>
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
+          {/* Meta row */}
           <div className="flex items-center gap-2 mb-1.5 flex-wrap">
             <SportBadge sport={entry.sport} size="xs" />
             {entry.sport === "CRICKET" && (entry.event.sportMeta as { format?: string } | null)?.format && (
@@ -453,16 +458,28 @@ function DiaryEntryCard({
             })()}
           </div>
 
-          <Link href={`/diary/${entry.id}`} className="group/link">
-            <h3 className="font-semibold text-white text-sm leading-snug group-hover/link:text-blue-400 transition-colors">
-              {entry.event.name}
-            </h3>
-          </Link>
-
-          {participants && (
-            <p className="text-xs text-gray-500 mt-0.5 truncate">{participants}</p>
+          {/* Scoreline — prominent when scores exist */}
+          {home && away && hasScore ? (
+            <div className="flex items-center gap-2 my-1.5 flex-wrap">
+              <span className="text-sm font-bold text-white">{home.entity.shortName ?? home.entity.name}</span>
+              <span className="text-lg font-black text-white tracking-tight tabular-nums">{homeScore}</span>
+              <span className="text-gray-500 font-bold">–</span>
+              <span className="text-lg font-black text-white tracking-tight tabular-nums">{awayScore}</span>
+              <span className="text-sm font-bold text-white">{away.entity.shortName ?? away.entity.name}</span>
+            </div>
+          ) : home && away ? (
+            <p className="text-sm font-semibold text-gray-300 my-1.5">
+              {home.entity.shortName ?? home.entity.name} <span className="text-gray-500 font-normal">vs</span> {away.entity.shortName ?? away.entity.name}
+            </p>
+          ) : (
+            <Link href={`/diary/${entry.id}`} className="group/link">
+              <h3 className="font-semibold text-white text-sm leading-snug group-hover/link:text-blue-400 transition-colors my-1">
+                {entry.event.name}
+              </h3>
+            </Link>
           )}
 
+          {/* Footer row */}
           <div className="flex items-center gap-3 mt-2 flex-wrap">
             <StarRating value={entry.rating} readonly size="sm" />
             <ViewingMethodIcon method={entry.viewingMethod} />
@@ -474,9 +491,7 @@ function DiaryEntryCard({
               })}
             </span>
             {entry.event.venue && (
-              <span className="text-xs text-gray-600 truncate">
-                {entry.event.venue}
-              </span>
+              <span className="text-xs text-gray-600 truncate">{entry.event.venue}</span>
             )}
           </div>
 
@@ -486,20 +501,8 @@ function DiaryEntryCard({
         </div>
 
         <div className="flex gap-1 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity flex-shrink-0">
-          <button
-            onClick={onEdit}
-            className="p-1.5 rounded text-gray-400 hover:text-white hover:bg-white/10 transition-colors text-xs"
-            title="Edit"
-          >
-            ✏️
-          </button>
-          <button
-            onClick={onDelete}
-            className="p-1.5 rounded text-gray-400 hover:text-red-400 hover:bg-red-900/20 transition-colors text-xs"
-            title="Delete"
-          >
-            🗑️
-          </button>
+          <button onClick={onEdit} className="p-1.5 rounded text-gray-400 hover:text-white hover:bg-white/10 transition-colors text-xs" title="Edit">✏️</button>
+          <button onClick={onDelete} className="p-1.5 rounded text-gray-400 hover:text-red-400 hover:bg-red-900/20 transition-colors text-xs" title="Delete">🗑️</button>
         </div>
       </div>
     </div>

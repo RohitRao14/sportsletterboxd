@@ -264,14 +264,14 @@ export default function LogClient() {
       <h1 className="text-2xl font-bold text-white mb-6">Log a Game</h1>
 
       {/* Sport tabs */}
-      <div className="flex gap-1.5 mb-5 flex-wrap">
+      <div className="flex gap-1.5 mb-5 overflow-x-auto pb-1 scrollbar-none">
         <button onClick={() => setSportFilter("")}
-          className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${sportFilter === "" ? "bg-blue-600 text-white" : "bg-white/10 text-gray-300 hover:bg-white/20"}`}>
+          className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors flex-shrink-0 ${sportFilter === "" ? "bg-blue-600 text-white" : "bg-white/10 text-gray-300 hover:bg-white/20"}`}>
           All
         </button>
         {SPORTS.map((s) => (
           <button key={s} onClick={() => setSportFilter(sportFilter === s ? "" : s)}
-            className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${sportFilter === s ? "bg-blue-600 text-white" : "bg-white/10 text-gray-300 hover:bg-white/20"}`}>
+            className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors flex-shrink-0 ${sportFilter === s ? "bg-blue-600 text-white" : "bg-white/10 text-gray-300 hover:bg-white/20"}`}>
             {s}
           </button>
         ))}
@@ -416,7 +416,7 @@ export default function LogClient() {
 
             {/* Game details — team mode only */}
             {isTeamMode && (
-              <div className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl p-5 space-y-4">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/8 rounded-xl p-5 space-y-4">
                 <p className="text-xs text-gray-500 uppercase tracking-wider font-medium">Game Details</p>
 
                 {/* Score */}
