@@ -5,7 +5,7 @@ export interface SessionData {
 }
 
 export const sessionOptions: SessionOptions = {
-  cookieName: "sports-lb-session",
+  cookieName: "boxscord-session",
   password: process.env.SESSION_SECRET as string,
   cookieOptions: {
     secure: process.env.NODE_ENV === "production",
