@@ -70,27 +70,31 @@ export default function LogClient() {
   const debounceRef = useRef<NodeJS.Timeout | null>(null);
 
   // ── Team search ──────────────────────────────────────────────────────────
-  const [teamQuery, setTeamQuery] = useState("");
-  const [teamResults, setTeamResults] = useState<EntityResult[]>([]);
-  const [teamSearching, setTeamSearching] = useState(false);
-  const [selectedTeam, setSelectedTeam] = useState<EntityResult | null>(null);
-  const teamDebounceRef = useRef<NodeJS.Timeout | null>(null);
+  const [homeQuery, setHomeQuery] = useState("");
+  const [homeResults, setHomeResults] = useState<EntityResult[]>([]);
+  const [homeSearching, setHomeSearching] = useState(false);
+  const [selectedHome, setSelectedHome] = useState<EntityResult | null>(null);
+  const homeDebounceRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Opponent
-  const [opponentQuery, setOpponentQuery] = useState("");
-  const [opponentResults, setOpponentResults] = useState<EntityResult[]>([]);
-  const [opponentSearching, setOpponentSearching] = useState(false);
-  const [selectedOpponent, setSelectedOpponent] = useState<EntityResult | null>(null);
-  const opponentDebounceRef = useRef<NodeJS.Timeout | null>(null);
+  // Away team
+  const [awayQuery, setAwayQuery] = useState("");
+  const [awayResults, setAwayResults] = useState<EntityResult[]>([]);
+  const [awaySearching, setAwaySearching] = useState(false);
+  const [selectedAway, setSelectedAway] = useState<EntityResult | null>(null);
+  const awayDebounceRef = useRef<NodeJS.Timeout | null>(null);
 
   // Game details
-  const [isHome, setIsHome] = useState(true);
   const [myScore, setMyScore] = useState("");
   const [oppScore, setOppScore] = useState("");
+  const [myInn2, setMyInn2] = useState("");
+  const [oppInn2, setOppInn2] = useState("");
+  const [cricketFormat, setCricketFormat] = useState<"T20" | "ODI" | "Test">("T20");
+  const [cricketResult, setCricketResult] = useState("");
   const [gameDate, setGameDate] = useState(new Date().toISOString().split("T")[0]);
   const [gameVenue, setGameVenue] = useState("");
   const [gameSeason, setGameSeason] = useState("2025-26");
   const [gameCompetitionId, setGameCompetitionId] = useState("");
+  const [customCompetitionName, setCustomCompetitionName] = useState("");
   const [competitions, setCompetitions] = useState<Competition[]>([]);
 
   // Rating
@@ -100,7 +104,7 @@ export default function LogClient() {
   const [notes, setNotes] = useState("");
   const [saving, setSaving] = useState(false);
 
-  const hasSelection = isTeamMode ? !!selectedTeam : !!selectedEvent;
+  const hasSelection = isTeamMode ? !!selectedHome : !!selectedEvent;
 
   // ── Search: events ───────────────────────────────────────────────────────
   const searchEvents = useCallback(async (q: string, sport: string) => {
@@ -141,17 +145,17 @@ export default function LogClient() {
 
   useEffect(() => {
     if (!isTeamMode) return;
-    if (teamDebounceRef.current) clearTimeout(teamDebounceRef.current);
-    teamDebounceRef.current = setTimeout(() => searchEntities(teamQuery, sportFilter, setTeamResults, setTeamSearching), 300);
-    return () => { if (teamDebounceRef.current) clearTimeout(teamDebounceRef.current); };
-  }, [teamQuery, sportFilter, isTeamMode, searchEntities]);
+    if (homeDebounceRef.current) clearTimeout(homeDebounceRef.current);
+    homeDebounceRef.current = setTimeout(() => searchEntities(homeQuery, sportFilter, setHomeResults, setHomeSearching), 300);
+    return () => { if (homeDebounceRef.current) clearTimeout(homeDebounceRef.current); };
+  }, [homeQuery, sportFilter, isTeamMode, searchEntities]);
 
   useEffect(() => {
     if (!isTeamMode) return;
-    if (opponentDebounceRef.current) clearTimeout(opponentDebounceRef.current);
-    opponentDebounceRef.current = setTimeout(() => searchEntities(opponentQuery, sportFilter, setOpponentResults, setOpponentSearching), 300);
-    return () => { if (opponentDebounceRef.current) clearTimeout(opponentDebounceRef.current); };
-  }, [opponentQuery, sportFilter, isTeamMode, searchEntities]);
+    if (awayDebounceRef.current) clearTimeout(awayDebounceRef.current);
+    awayDebounceRef.current = setTimeout(() => searchEntities(awayQuery, sportFilter, setAwayResults, setAwaySearching), 300);
+    return () => { if (awayDebounceRef.current) clearTimeout(awayDebounceRef.current); };
+  }, [awayQuery, sportFilter, isTeamMode, searchEntities]);
 
   // Load competitions when sport changes
   useEffect(() => {
@@ -166,8 +170,8 @@ export default function LogClient() {
 
   // Reset on sport change
   useEffect(() => {
-    setSelectedTeam(null); setTeamQuery(""); setTeamResults([]);
-    setSelectedOpponent(null); setOpponentQuery(""); setOpponentResults([]);
+    setSelectedHome(null); setHomeQuery(""); setHomeResults([]);
+    setSelectedAway(null); setAwayQuery(""); setAwayResults([]);
     setSelectedEvent(null); setQuery(""); setResults([]);
     setRating(0); setNotes("");
   }, [sportFilter]);
@@ -188,19 +192,21 @@ export default function LogClient() {
     try {
       let eventId: string;
 
-      if (isTeamMode && selectedTeam) {
+      if (isTeamMode && selectedHome) {
         // Create the event first
-        const myName = selectedTeam.shortName ?? selectedTeam.name;
-        const oppName = (selectedOpponent?.shortName ?? selectedOpponent?.name) ?? (opponentQuery || "Opponent");
+        const homeName = selectedHome.shortName ?? selectedHome.name;
+        const awayName = (selectedAway?.shortName ?? selectedAway?.name) ?? (awayQuery || "Away");
         const hasScores = myScore !== "" && oppScore !== "";
         const eventName = hasScores
-          ? (isHome ? `${myName} ${myScore} – ${oppScore} ${oppName}` : `${oppName} ${oppScore} – ${myScore} ${myName}`)
-          : (isHome ? `${myName} vs ${oppName}` : `${oppName} vs ${myName}`);
+          ? `${homeName} ${myScore} – ${oppScore} ${awayName}`
+          : `${homeName} vs ${awayName}`;
 
-        const homeEntityId = isHome ? (selectedTeam.id.startsWith("__manual__") ? null : selectedTeam.id) : (selectedOpponent && !selectedOpponent.id.startsWith("__manual__") ? selectedOpponent.id : null);
-        const awayEntityId = isHome ? (selectedOpponent && !selectedOpponent.id.startsWith("__manual__") ? selectedOpponent.id : null) : (selectedTeam.id.startsWith("__manual__") ? null : selectedTeam.id);
-        const hScoreText = isHome ? (myScore || null) : (oppScore || null);
-        const aScoreText = isHome ? (oppScore || null) : (myScore || null);
+        const homeEntityId = selectedHome.id.startsWith("__manual__") ? null : selectedHome.id;
+        const awayEntityId = selectedAway && !selectedAway.id.startsWith("__manual__") ? selectedAway.id : null;
+        const hScoreText = myScore || null;
+        const aScoreText = oppScore || null;
+        const hInn2 = myInn2 || null;
+        const aInn2 = oppInn2 || null;
 
         const evRes = await fetch("/api/events", {
           method: "POST",
@@ -212,10 +218,17 @@ export default function LogClient() {
             startTime: gameDate,
             venue: gameVenue || null,
             competitionId: gameCompetitionId || null,
+            customCompetitionName: (!gameCompetitionId && customCompetitionName) ? customCompetitionName : null,
             homeEntityId,
             awayEntityId,
             homeScoreText: hScoreText,
             awayScoreText: aScoreText,
+            homeInn1: sportFilter === "CRICKET" && cricketFormat === "Test" ? hScoreText : null,
+            homeInn2: sportFilter === "CRICKET" && cricketFormat === "Test" ? hInn2 : null,
+            awayInn1: sportFilter === "CRICKET" && cricketFormat === "Test" ? aScoreText : null,
+            awayInn2: sportFilter === "CRICKET" && cricketFormat === "Test" ? aInn2 : null,
+            cricketFormat: sportFilter === "CRICKET" ? cricketFormat : null,
+            cricketResult: sportFilter === "CRICKET" ? (cricketResult || null) : null,
           }),
         });
         if (!evRes.ok) throw new Error("Failed to create event");
@@ -266,39 +279,81 @@ export default function LogClient() {
 
       {isTeamMode ? (
         /* ── Team search ── */
-        <div className="relative mb-4">
-          <label className="text-xs text-gray-500 uppercase tracking-wider block mb-2">Your Team</label>
-          <input
-            type="text"
-            value={teamQuery}
-            onChange={(e) => { setTeamQuery(e.target.value); setSelectedTeam(null); }}
-            placeholder={`Search ${sportFilter} teams...`}
-            autoFocus
-            className={inputCls}
-          />
-          {teamSearching && <p className="text-xs text-gray-500 mt-1">Searching...</p>}
-          {teamQuery && !teamSearching && !selectedTeam && (teamResults.length > 0 || true) && (
-            <div className="absolute z-10 w-full mt-1 bg-[#1a1d27] border border-[#2a2d3a] rounded-xl overflow-hidden shadow-xl">
-              {teamResults.map(r => (
-                <button key={r.id} onClick={() => { setSelectedTeam(r); setTeamQuery(r.name); setTeamResults([]); }}
-                  className="w-full text-left px-4 py-2.5 text-sm text-white hover:bg-[#22263a] transition-colors border-b border-[#2a2d3a] last:border-0 flex items-center gap-2">
-                  <SportBadge sport={r.sport} size="xs" />
-                  <span>{r.name}</span>
-                  {r.country && <span className="text-gray-500 text-xs ml-auto">{r.country}</span>}
+        <div className="space-y-3 mb-4">
+          {/* Home team */}
+          <div className="relative">
+            <label className="text-xs text-gray-500 uppercase tracking-wider block mb-2">
+              <span className="text-blue-400 font-semibold">H</span> Home Team
+            </label>
+            <input
+              type="text"
+              value={homeQuery}
+              onChange={(e) => { setHomeQuery(e.target.value); setSelectedHome(null); }}
+              placeholder={`Search ${sportFilter} teams...`}
+              autoFocus
+              className={inputCls}
+            />
+            {homeSearching && <p className="text-xs text-gray-500 mt-1">Searching...</p>}
+            {homeQuery && !homeSearching && !selectedHome && (
+              <div className="absolute z-10 w-full mt-1 bg-[#1a1d27] border border-[#2a2d3a] rounded-xl overflow-hidden shadow-xl">
+                {homeResults.map(r => (
+                  <button key={r.id} onClick={() => { setSelectedHome(r); setHomeQuery(r.name); setHomeResults([]); }}
+                    className="w-full text-left px-4 py-2.5 text-sm text-white hover:bg-[#22263a] transition-colors border-b border-[#2a2d3a] last:border-0 flex items-center gap-2">
+                    <SportBadge sport={r.sport} size="xs" />
+                    <span>{r.name}</span>
+                    {r.country && <span className="text-gray-500 text-xs ml-auto">{r.country}</span>}
+                  </button>
+                ))}
+                <button onClick={() => { const manual = { id: `__manual__${homeQuery}`, sport: sportFilter as Sport, entityType: "manual", name: homeQuery, shortName: null, country: null }; setSelectedHome(manual); setHomeResults([]); }}
+                  className="w-full text-left px-4 py-2.5 text-sm text-blue-400 hover:bg-[#22263a] transition-colors flex items-center gap-2">
+                  + Use &ldquo;{homeQuery}&rdquo;
                 </button>
-              ))}
-              <button onClick={() => { const manual = { id: `__manual__${teamQuery}`, sport: sportFilter as Sport, entityType: "manual", name: teamQuery, shortName: null, country: null }; setSelectedTeam(manual); setTeamResults([]); }}
-                className="w-full text-left px-4 py-2.5 text-sm text-blue-400 hover:bg-[#22263a] transition-colors flex items-center gap-2">
-                + Use &ldquo;{teamQuery}&rdquo;
-              </button>
-            </div>
-          )}
-          {selectedTeam && (
-            <div className="mt-1 flex items-center gap-2 text-xs text-blue-400">
-              <span>✓ {selectedTeam.name}</span>
-              <button onClick={() => { setSelectedTeam(null); setTeamQuery(""); }} className="text-gray-500 hover:text-white">✕ change</button>
-            </div>
-          )}
+              </div>
+            )}
+            {selectedHome && (
+              <div className="mt-1 flex items-center gap-2 text-xs text-blue-400">
+                <span>✓ {selectedHome.name}</span>
+                <button onClick={() => { setSelectedHome(null); setHomeQuery(""); }} className="text-gray-500 hover:text-white">✕ change</button>
+              </div>
+            )}
+          </div>
+
+          {/* Away team */}
+          <div className="relative">
+            <label className="text-xs text-gray-500 uppercase tracking-wider block mb-2">
+              <span className="text-gray-500 font-semibold">A</span> Away Team
+            </label>
+            <input
+              type="text"
+              value={awayQuery}
+              onChange={(e) => { setAwayQuery(e.target.value); setSelectedAway(null); }}
+              placeholder={`Search ${sportFilter} teams...`}
+              className={inputCls}
+            />
+            {awaySearching && <p className="text-xs text-gray-500 mt-1">Searching...</p>}
+            {awayQuery && !awaySearching && !selectedAway && (
+              <div className="absolute z-10 w-full mt-1 bg-[#1a1d27] border border-[#2a2d3a] rounded-xl overflow-hidden shadow-xl">
+                {awayResults.filter(r => r.id !== selectedHome?.id).slice(0, 6).map(r => (
+                  <button key={r.id} onClick={() => { setSelectedAway(r); setAwayQuery(r.name); setAwayResults([]); }}
+                    className="w-full text-left px-4 py-2.5 text-sm text-white hover:bg-[#22263a] transition-colors border-b border-[#2a2d3a] last:border-0 flex items-center gap-2">
+                    <SportBadge sport={r.sport} size="xs" />
+                    <span>{r.name}</span>
+                    {r.country && <span className="text-gray-500 text-xs ml-auto">{r.country}</span>}
+                  </button>
+                ))}
+                <button onClick={() => { const manual = { id: `__manual__${awayQuery}`, sport: sportFilter as Sport, entityType: "manual", name: awayQuery, shortName: null, country: null }; setSelectedAway(manual); setAwayResults([]); }}
+                  className="w-full text-left px-4 py-2.5 text-sm text-blue-400 hover:bg-[#22263a] transition-colors flex items-center gap-2">
+                  + Use &ldquo;{awayQuery}&rdquo;
+                </button>
+              </div>
+            )}
+            {selectedAway && (
+              <div className="mt-1 flex items-center gap-2 text-xs text-blue-400">
+                <span>✓ {selectedAway.name}</span>
+                <button onClick={() => { setSelectedAway(null); setAwayQuery(""); }} className="text-gray-500 hover:text-white">✕ change</button>
+              </div>
+            )}
+          </div>
         </div>
       ) : (
         /* ── Event search ── */
@@ -349,66 +404,77 @@ export default function LogClient() {
               <div className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl p-5 space-y-4">
                 <p className="text-xs text-gray-500 uppercase tracking-wider font-medium">Game Details</p>
 
-                {/* Opponent */}
-                <div className="relative">
-                  <label className="text-xs text-gray-400 block mb-1.5">Opponent</label>
-                  <input
-                    type="text"
-                    value={opponentQuery}
-                    onChange={(e) => { setOpponentQuery(e.target.value); setSelectedOpponent(null); }}
-                    placeholder="Search or type opponent name..."
-                    className={inputCls}
-                  />
-                  {opponentSearching && <p className="text-xs text-gray-500 mt-1">Searching...</p>}
-                  {opponentQuery && !opponentSearching && !selectedOpponent && (
-                    <div className="absolute z-10 w-full mt-1 bg-[#1a1d27] border border-[#2a2d3a] rounded-xl overflow-hidden shadow-xl">
-                      {opponentResults.filter(r => r.id !== selectedTeam?.id).slice(0, 6).map(r => (
-                        <button key={r.id} type="button" onClick={() => { setSelectedOpponent(r); setOpponentQuery(r.name); setOpponentResults([]); }}
-                          className="w-full text-left px-4 py-2.5 text-sm text-white hover:bg-[#22263a] transition-colors border-b border-[#2a2d3a] last:border-0">
-                          {r.name} {r.country && <span className="text-gray-500 text-xs">· {r.country}</span>}
-                        </button>
-                      ))}
-                      <button type="button" onClick={() => { const manual = { id: `__manual__${opponentQuery}`, sport: sportFilter as Sport, entityType: "manual", name: opponentQuery, shortName: null, country: null }; setSelectedOpponent(manual); setOpponentResults([]); }}
-                        className="w-full text-left px-4 py-2.5 text-sm text-blue-400 hover:bg-[#22263a] transition-colors">
-                        + Use &ldquo;{opponentQuery}&rdquo;
-                      </button>
-                    </div>
-                  )}
-                </div>
-
-                {/* Home/Away + Score on same row */}
-                <div className="grid grid-cols-2 gap-3">
+                {/* Cricket format selector */}
+                {sportFilter === "CRICKET" && (
                   <div>
-                    <label className="text-xs text-gray-400 block mb-1.5">Venue</label>
+                    <label className="text-xs text-gray-400 block mb-1.5">Format</label>
                     <div className="flex gap-1.5">
-                      {[true, false].map(home => (
-                        <button key={String(home)} type="button" onClick={() => setIsHome(home)}
-                          className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${isHome === home ? "bg-blue-600 text-white" : "bg-white/10 text-gray-300 hover:bg-white/20"}`}>
-                          {home ? "Home" : "Away"}
+                      {(["T20", "ODI", "Test"] as const).map(f => (
+                        <button key={f} type="button" onClick={() => setCricketFormat(f)}
+                          className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${cricketFormat === f ? "bg-blue-600 text-white" : "bg-white/10 text-gray-300 hover:bg-white/20"}`}>
+                          {f}
                         </button>
                       ))}
                     </div>
                   </div>
+                )}
+
+                {/* Score */}
+                {sportFilter === "CRICKET" ? (
+                  <div>
+                    <label className="text-xs text-gray-400 block mb-1.5">
+                      Score (optional){cricketFormat === "Test" ? " — 1st innings" : ""}
+                    </label>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div>
+                        <p className="text-xs text-gray-600 mb-1">{selectedHome?.shortName ?? selectedHome?.name ?? "Home"}</p>
+                        <input type="text" value={myScore} onChange={e => setMyScore(e.target.value)}
+                          placeholder={cricketFormat === "T20" ? "185/4 (20 ov)" : cricketFormat === "ODI" ? "287/6 (50 ov)" : "320/8 dec"}
+                          className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white focus:border-blue-500 focus:outline-none" />
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-600 mb-1">{selectedAway?.shortName ?? selectedAway?.name ?? (awayQuery || "Away")}</p>
+                        <input type="text" value={oppScore} onChange={e => setOppScore(e.target.value)}
+                          placeholder={cricketFormat === "T20" ? "180/6 (20 ov)" : cricketFormat === "ODI" ? "245 (48.2 ov)" : "245"}
+                          className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white focus:border-blue-500 focus:outline-none" />
+                      </div>
+                    </div>
+                    {cricketFormat === "Test" && (
+                      <div className="mt-2">
+                        <label className="text-xs text-gray-400 block mb-1.5">2nd innings</label>
+                        <div className="grid grid-cols-2 gap-2">
+                          <input type="text" value={myInn2} onChange={e => setMyInn2(e.target.value)}
+                            placeholder="156/3 dec" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white focus:border-blue-500 focus:outline-none" />
+                          <input type="text" value={oppInn2} onChange={e => setOppInn2(e.target.value)}
+                            placeholder="98" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white focus:border-blue-500 focus:outline-none" />
+                        </div>
+                      </div>
+                    )}
+                    <div className="mt-2">
+                      <label className="text-xs text-gray-400 block mb-1.5">Result (optional)</label>
+                      <input type="text" value={cricketResult} onChange={e => setCricketResult(e.target.value)}
+                        placeholder="e.g. India won by 45 runs"
+                        className={inputCls} />
+                    </div>
+                  </div>
+                ) : (
                   <div>
                     <label className="text-xs text-gray-400 block mb-1.5">Score (optional)</label>
-                    {sportFilter === "CRICKET" ? (
-                      <div className="space-y-1.5">
-                        <input type="text" value={myScore} onChange={e => setMyScore(e.target.value)}
-                          placeholder="e.g. 287/6 (50 ov)" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white focus:border-blue-500 focus:outline-none" />
-                        <input type="text" value={oppScore} onChange={e => setOppScore(e.target.value)}
-                          placeholder="e.g. 245 (48.2 ov)" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white focus:border-blue-500 focus:outline-none" />
-                      </div>
-                    ) : (
-                      <div className="flex items-center gap-1.5">
+                    <div className="flex items-center gap-2">
+                      <div className="flex-1 text-center">
+                        <p className="text-xs text-gray-600 mb-1">{selectedHome?.shortName ?? selectedHome?.name ?? "Home"}</p>
                         <input type="text" inputMode="numeric" value={myScore} onChange={e => setMyScore(e.target.value)}
                           placeholder="–" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white text-center focus:border-blue-500 focus:outline-none" />
-                        <span className="text-gray-500 text-sm">:</span>
+                      </div>
+                      <span className="text-gray-500 text-lg mt-4">:</span>
+                      <div className="flex-1 text-center">
+                        <p className="text-xs text-gray-600 mb-1">{selectedAway?.shortName ?? selectedAway?.name ?? (awayQuery || "Away")}</p>
                         <input type="text" inputMode="numeric" value={oppScore} onChange={e => setOppScore(e.target.value)}
                           placeholder="–" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white text-center focus:border-blue-500 focus:outline-none" />
                       </div>
-                    )}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Date + Competition */}
                 <div className="grid grid-cols-2 gap-3">
@@ -418,11 +484,16 @@ export default function LogClient() {
                   </div>
                   <div>
                     <label className="text-xs text-gray-400 block mb-1.5">Competition</label>
-                    <select value={gameCompetitionId} onChange={e => setGameCompetitionId(e.target.value)}
+                    <select value={gameCompetitionId} onChange={e => { setGameCompetitionId(e.target.value); if (e.target.value !== "__custom__") setCustomCompetitionName(""); }}
                       className={inputCls}>
-                      <option value="">Other</option>
+                      <option value="">Other / Unknown</option>
                       {competitions.map(c => <option key={c.id} value={c.id}>{c.shortName ?? c.name}</option>)}
+                      <option value="__custom__">+ Type custom name...</option>
                     </select>
+                    {gameCompetitionId === "__custom__" && (
+                      <input type="text" value={customCompetitionName} onChange={e => setCustomCompetitionName(e.target.value)}
+                        placeholder="e.g. IPL 2026" className={`${inputCls} mt-1.5`} />
+                    )}
                   </div>
                 </div>
 
