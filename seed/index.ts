@@ -1,9 +1,11 @@
 import "dotenv/config";
 import { PrismaClient, Prisma, Sport, EntityType, CompetitionType, EventStatus, ParticipantRole } from "@prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
 import fs from "fs";
 import path from "path";
 
-const prisma = new PrismaClient();
+const adapter = new PrismaPg({ connectionString: process.env.POSTGRES_URL ?? process.env.DATABASE_URL });
+const prisma = new PrismaClient({ adapter });
 
 function loadJson<T>(filePath: string): T {
   const fullPath = path.join(__dirname, "data", filePath);

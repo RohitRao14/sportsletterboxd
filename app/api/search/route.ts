@@ -8,18 +8,18 @@ type EventRow = {
   id: string;
   sport: Sport;
   name: string;
-  short_name: string | null;
-  start_time: Date | null;
+  shortName: string | null;
+  startTime: Date | null;
   venue: string | null;
   city: string | null;
   country: string | null;
   season: string;
-  competition_id: string;
-  sport_meta: unknown;
+  competitionId: string;
+  sportMeta: unknown;
   status: string;
-  is_manual: boolean;
+  isManual: boolean;
   rank: number;
-  already_logged: boolean;
+  alreadyLogged: boolean;
 };
 
 export async function GET(request: NextRequest) {
@@ -38,7 +38,6 @@ export async function GET(request: NextRequest) {
       ? (sportParam as Sport)
       : null;
 
-  // Build tsquery with prefix matching — sanitize each token
   const tokens = q
     .split(/\s+/)
     .filter(Boolean)
@@ -52,40 +51,38 @@ export async function GET(request: NextRequest) {
   const tsQuery = tokens.map((t) => `${t}:*`).join(" & ");
 
   try {
-    // Use raw SQL for FTS — Prisma doesn't have a tsvector query builder
     let ftsResults: EventRow[] = [];
     let trigramResults: EventRow[] = [];
 
     if (sport) {
       ftsResults = await prisma.$queryRaw<EventRow[]>`
         SELECT
-          e.id, e.sport, e.name, e.short_name, e.start_time,
-          e.venue, e.city, e.country, e.season, e.competition_id,
-          e.sport_meta, e.status, e.is_manual,
+          e.id, e.sport, e.name, e."shortName", e."startTime",
+          e.venue, e.city, e.country, e.season, e."competitionId",
+          e."sportMeta", e.status, e."isManual",
           ts_rank(e.search_vector, to_tsquery('english', unaccent(${tsQuery}))) AS rank,
-          EXISTS(SELECT 1 FROM diary_entries d WHERE d.event_id = e.id) AS already_logged
+          EXISTS(SELECT 1 FROM diary_entries d WHERE d."eventId" = e.id) AS "alreadyLogged"
         FROM events e
         WHERE e.search_vector @@ to_tsquery('english', unaccent(${tsQuery}))
           AND e.sport = ${sport}::"Sport"
-        ORDER BY rank DESC, e.start_time DESC NULLS LAST
+        ORDER BY rank DESC, e."startTime" DESC NULLS LAST
         LIMIT ${limit} OFFSET ${offset}
       `;
     } else {
       ftsResults = await prisma.$queryRaw<EventRow[]>`
         SELECT
-          e.id, e.sport, e.name, e.short_name, e.start_time,
-          e.venue, e.city, e.country, e.season, e.competition_id,
-          e.sport_meta, e.status, e.is_manual,
+          e.id, e.sport, e.name, e."shortName", e."startTime",
+          e.venue, e.city, e.country, e.season, e."competitionId",
+          e."sportMeta", e.status, e."isManual",
           ts_rank(e.search_vector, to_tsquery('english', unaccent(${tsQuery}))) AS rank,
-          EXISTS(SELECT 1 FROM diary_entries d WHERE d.event_id = e.id) AS already_logged
+          EXISTS(SELECT 1 FROM diary_entries d WHERE d."eventId" = e.id) AS "alreadyLogged"
         FROM events e
         WHERE e.search_vector @@ to_tsquery('english', unaccent(${tsQuery}))
-        ORDER BY rank DESC, e.start_time DESC NULLS LAST
+        ORDER BY rank DESC, e."startTime" DESC NULLS LAST
         LIMIT ${limit} OFFSET ${offset}
       `;
     }
 
-    // Trigram fallback when FTS returns few results
     if (ftsResults.length < 5) {
       const seenIds = ftsResults.map((r) => r.id);
       const remaining = limit - ftsResults.length;
@@ -94,30 +91,30 @@ export async function GET(request: NextRequest) {
         if (seenIds.length > 0) {
           trigramResults = await prisma.$queryRaw<EventRow[]>`
             SELECT
-              e.id, e.sport, e.name, e.short_name, e.start_time,
-              e.venue, e.city, e.country, e.season, e.competition_id,
-              e.sport_meta, e.status, e.is_manual,
+              e.id, e.sport, e.name, e."shortName", e."startTime",
+              e.venue, e.city, e.country, e.season, e."competitionId",
+              e."sportMeta", e.status, e."isManual",
               similarity(e.name, ${q}) AS rank,
-              EXISTS(SELECT 1 FROM diary_entries d WHERE d.event_id = e.id) AS already_logged
+              EXISTS(SELECT 1 FROM diary_entries d WHERE d."eventId" = e.id) AS "alreadyLogged"
             FROM events e
             WHERE e.name % ${q}
               AND e.sport = ${sport}::"Sport"
               AND e.id != ALL(${seenIds}::text[])
-            ORDER BY rank DESC, e.start_time DESC NULLS LAST
+            ORDER BY rank DESC, e."startTime" DESC NULLS LAST
             LIMIT ${remaining}
           `;
         } else {
           trigramResults = await prisma.$queryRaw<EventRow[]>`
             SELECT
-              e.id, e.sport, e.name, e.short_name, e.start_time,
-              e.venue, e.city, e.country, e.season, e.competition_id,
-              e.sport_meta, e.status, e.is_manual,
+              e.id, e.sport, e.name, e."shortName", e."startTime",
+              e.venue, e.city, e.country, e.season, e."competitionId",
+              e."sportMeta", e.status, e."isManual",
               similarity(e.name, ${q}) AS rank,
-              EXISTS(SELECT 1 FROM diary_entries d WHERE d.event_id = e.id) AS already_logged
+              EXISTS(SELECT 1 FROM diary_entries d WHERE d."eventId" = e.id) AS "alreadyLogged"
             FROM events e
             WHERE e.name % ${q}
               AND e.sport = ${sport}::"Sport"
-            ORDER BY rank DESC, e.start_time DESC NULLS LAST
+            ORDER BY rank DESC, e."startTime" DESC NULLS LAST
             LIMIT ${remaining}
           `;
         }
@@ -125,28 +122,28 @@ export async function GET(request: NextRequest) {
         if (seenIds.length > 0) {
           trigramResults = await prisma.$queryRaw<EventRow[]>`
             SELECT
-              e.id, e.sport, e.name, e.short_name, e.start_time,
-              e.venue, e.city, e.country, e.season, e.competition_id,
-              e.sport_meta, e.status, e.is_manual,
+              e.id, e.sport, e.name, e."shortName", e."startTime",
+              e.venue, e.city, e.country, e.season, e."competitionId",
+              e."sportMeta", e.status, e."isManual",
               similarity(e.name, ${q}) AS rank,
-              EXISTS(SELECT 1 FROM diary_entries d WHERE d.event_id = e.id) AS already_logged
+              EXISTS(SELECT 1 FROM diary_entries d WHERE d."eventId" = e.id) AS "alreadyLogged"
             FROM events e
             WHERE e.name % ${q}
               AND e.id != ALL(${seenIds}::text[])
-            ORDER BY rank DESC, e.start_time DESC NULLS LAST
+            ORDER BY rank DESC, e."startTime" DESC NULLS LAST
             LIMIT ${remaining}
           `;
         } else {
           trigramResults = await prisma.$queryRaw<EventRow[]>`
             SELECT
-              e.id, e.sport, e.name, e.short_name, e.start_time,
-              e.venue, e.city, e.country, e.season, e.competition_id,
-              e.sport_meta, e.status, e.is_manual,
+              e.id, e.sport, e.name, e."shortName", e."startTime",
+              e.venue, e.city, e.country, e.season, e."competitionId",
+              e."sportMeta", e.status, e."isManual",
               similarity(e.name, ${q}) AS rank,
-              EXISTS(SELECT 1 FROM diary_entries d WHERE d.event_id = e.id) AS already_logged
+              EXISTS(SELECT 1 FROM diary_entries d WHERE d."eventId" = e.id) AS "alreadyLogged"
             FROM events e
             WHERE e.name % ${q}
-            ORDER BY rank DESC, e.start_time DESC NULLS LAST
+            ORDER BY rank DESC, e."startTime" DESC NULLS LAST
             LIMIT ${remaining}
           `;
         }

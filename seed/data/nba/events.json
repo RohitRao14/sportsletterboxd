@@ -367,7 +367,7 @@
     "city": "Los Angeles",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "participantNames": ["Los Angeles Lakers", "Denver Nuggets", "Lakers", "Nuggets", "LAL", "DEN"]
@@ -388,7 +388,7 @@
     "city": "Boston",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "First Round",
@@ -412,7 +412,7 @@
     "city": "Cleveland",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "First Round",
@@ -436,7 +436,7 @@
     "city": "Milwaukee",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "First Round",
@@ -460,7 +460,7 @@
     "city": "Orlando",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "First Round",
@@ -484,7 +484,7 @@
     "city": "Oklahoma City",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "First Round",
@@ -508,7 +508,7 @@
     "city": "Denver",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "First Round",
@@ -532,7 +532,7 @@
     "city": "Minneapolis",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "First Round",
@@ -556,7 +556,7 @@
     "city": "Phoenix",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "First Round",
@@ -580,7 +580,7 @@
     "city": "Boston",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "Conference Semifinals",
@@ -604,7 +604,7 @@
     "city": "Milwaukee",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "Conference Semifinals",
@@ -628,7 +628,7 @@
     "city": "Oklahoma City",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "Conference Semifinals",
@@ -652,7 +652,7 @@
     "city": "Minneapolis",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "Conference Semifinals",
@@ -676,7 +676,7 @@
     "city": "Boston",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "Conference Finals",
@@ -700,7 +700,7 @@
     "city": "Oklahoma City",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "Conference Finals",
@@ -724,7 +724,7 @@
     "city": "Boston",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "NBA Finals",
@@ -747,7 +747,7 @@
     "city": "Oklahoma City",
     "country": "USA",
     "season": "2025-26",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "round": "NBA Finals",

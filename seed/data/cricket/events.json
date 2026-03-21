@@ -340,7 +340,7 @@
     "city": "Mumbai",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -362,7 +362,7 @@
     "city": "Bengaluru",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -384,7 +384,7 @@
     "city": "Chennai",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -406,7 +406,7 @@
     "city": "Mumbai",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -428,7 +428,7 @@
     "city": "Kolkata",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -450,7 +450,7 @@
     "city": "Delhi",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -472,7 +472,7 @@
     "city": "Jaipur",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -494,7 +494,7 @@
     "city": "Lucknow",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -516,7 +516,7 @@
     "city": "Chennai",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -538,7 +538,7 @@
     "city": "Ahmedabad",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -557,7 +557,7 @@
     "city": "Kolkata",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -576,7 +576,7 @@
     "city": "Mumbai",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
@@ -595,7 +595,7 @@
     "city": "Ahmedabad",
     "country": "India",
     "season": "2026",
-    "status": "UPCOMING",
+    "status": "SCHEDULED",
     "isManual": false,
     "sportMeta": {
       "format": "T20",
