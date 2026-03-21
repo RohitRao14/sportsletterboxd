@@ -19,8 +19,8 @@ export async function POST(request: NextRequest) {
     competitionId: providedCompetitionId,
     homeEntityId,
     awayEntityId,
-    homeScore,
-    awayScore,
+    homeScoreText,
+    awayScoreText,
   } = body;
 
   if (!name || !sport || !season) {
@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
         eventId: event.id,
         entityId: homeEntityId,
         role: ParticipantRole.HOME_TEAM,
-        result: homeScore != null ? { score: homeScore } : undefined,
+        result: homeScoreText ? { scoreText: homeScoreText } : undefined,
       },
     });
   }
@@ -106,7 +106,7 @@ export async function POST(request: NextRequest) {
         eventId: event.id,
         entityId: awayEntityId,
         role: ParticipantRole.AWAY_TEAM,
-        result: awayScore != null ? { score: awayScore } : undefined,
+        result: awayScoreText ? { scoreText: awayScoreText } : undefined,
       },
     });
   }

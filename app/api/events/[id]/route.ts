@@ -8,18 +8,18 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   const body = await request.json();
-  const { name, startTime, venue, season, competitionId, homeScore, awayScore } = body;
+  const { name, startTime, venue, season, competitionId, homeScoreText, awayScoreText } = body;
 
   try {
     // Update scores on participants if provided
-    if (homeScore !== undefined || awayScore !== undefined) {
+    if (homeScoreText !== undefined || awayScoreText !== undefined) {
       const participants = await prisma.eventParticipant.findMany({ where: { eventId: params.id } });
       for (const p of participants) {
-        if ((p.role === "HOME_TEAM") && homeScore !== null && homeScore !== undefined) {
-          await prisma.eventParticipant.update({ where: { id: p.id }, data: { result: { score: homeScore } } });
+        if (p.role === "HOME_TEAM" && homeScoreText !== undefined) {
+          await prisma.eventParticipant.update({ where: { id: p.id }, data: { result: homeScoreText ? { scoreText: homeScoreText } : {} } });
         }
-        if ((p.role === "AWAY_TEAM") && awayScore !== null && awayScore !== undefined) {
-          await prisma.eventParticipant.update({ where: { id: p.id }, data: { result: { score: awayScore } } });
+        if (p.role === "AWAY_TEAM" && awayScoreText !== undefined) {
+          await prisma.eventParticipant.update({ where: { id: p.id }, data: { result: awayScoreText ? { scoreText: awayScoreText } : {} } });
         }
       }
     }

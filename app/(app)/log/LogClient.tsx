@@ -194,13 +194,13 @@ export default function LogClient() {
         const oppName = (selectedOpponent?.shortName ?? selectedOpponent?.name) ?? (opponentQuery || "Opponent");
         const hasScores = myScore !== "" && oppScore !== "";
         const eventName = hasScores
-          ? (isHome ? `${myName} ${myScore}–${oppScore} ${oppName}` : `${oppName} ${oppScore}–${myScore} ${myName}`)
+          ? (isHome ? `${myName} ${myScore} – ${oppScore} ${oppName}` : `${oppName} ${oppScore} – ${myScore} ${myName}`)
           : (isHome ? `${myName} vs ${oppName}` : `${oppName} vs ${myName}`);
 
-        const homeEntityId = isHome ? selectedTeam.id : selectedOpponent?.id;
-        const awayEntityId = isHome ? selectedOpponent?.id : selectedTeam.id;
-        const hScore = isHome ? (myScore !== "" ? Number(myScore) : null) : (oppScore !== "" ? Number(oppScore) : null);
-        const aScore = isHome ? (oppScore !== "" ? Number(oppScore) : null) : (myScore !== "" ? Number(myScore) : null);
+        const homeEntityId = isHome ? (selectedTeam.id.startsWith("__manual__") ? null : selectedTeam.id) : (selectedOpponent && !selectedOpponent.id.startsWith("__manual__") ? selectedOpponent.id : null);
+        const awayEntityId = isHome ? (selectedOpponent && !selectedOpponent.id.startsWith("__manual__") ? selectedOpponent.id : null) : (selectedTeam.id.startsWith("__manual__") ? null : selectedTeam.id);
+        const hScoreText = isHome ? (myScore || null) : (oppScore || null);
+        const aScoreText = isHome ? (oppScore || null) : (myScore || null);
 
         const evRes = await fetch("/api/events", {
           method: "POST",
@@ -212,10 +212,10 @@ export default function LogClient() {
             startTime: gameDate,
             venue: gameVenue || null,
             competitionId: gameCompetitionId || null,
-            homeEntityId: homeEntityId ?? null,
-            awayEntityId: awayEntityId ?? null,
-            homeScore: hScore,
-            awayScore: aScore,
+            homeEntityId,
+            awayEntityId,
+            homeScoreText: hScoreText,
+            awayScoreText: aScoreText,
           }),
         });
         if (!evRes.ok) throw new Error("Failed to create event");
@@ -277,7 +277,7 @@ export default function LogClient() {
             className={inputCls}
           />
           {teamSearching && <p className="text-xs text-gray-500 mt-1">Searching...</p>}
-          {teamResults.length > 0 && !selectedTeam && (
+          {teamQuery && !teamSearching && !selectedTeam && (teamResults.length > 0 || true) && (
             <div className="absolute z-10 w-full mt-1 bg-[#1a1d27] border border-[#2a2d3a] rounded-xl overflow-hidden shadow-xl">
               {teamResults.map(r => (
                 <button key={r.id} onClick={() => { setSelectedTeam(r); setTeamQuery(r.name); setTeamResults([]); }}
@@ -287,6 +287,10 @@ export default function LogClient() {
                   {r.country && <span className="text-gray-500 text-xs ml-auto">{r.country}</span>}
                 </button>
               ))}
+              <button onClick={() => { const manual = { id: `__manual__${teamQuery}`, sport: sportFilter as Sport, entityType: "manual", name: teamQuery, shortName: null, country: null }; setSelectedTeam(manual); setTeamResults([]); }}
+                className="w-full text-left px-4 py-2.5 text-sm text-blue-400 hover:bg-[#22263a] transition-colors flex items-center gap-2">
+                + Use &ldquo;{teamQuery}&rdquo;
+              </button>
             </div>
           )}
           {selectedTeam && (
@@ -356,7 +360,7 @@ export default function LogClient() {
                     className={inputCls}
                   />
                   {opponentSearching && <p className="text-xs text-gray-500 mt-1">Searching...</p>}
-                  {opponentResults.length > 0 && !selectedOpponent && (
+                  {opponentQuery && !opponentSearching && !selectedOpponent && (
                     <div className="absolute z-10 w-full mt-1 bg-[#1a1d27] border border-[#2a2d3a] rounded-xl overflow-hidden shadow-xl">
                       {opponentResults.filter(r => r.id !== selectedTeam?.id).slice(0, 6).map(r => (
                         <button key={r.id} type="button" onClick={() => { setSelectedOpponent(r); setOpponentQuery(r.name); setOpponentResults([]); }}
@@ -364,6 +368,10 @@ export default function LogClient() {
                           {r.name} {r.country && <span className="text-gray-500 text-xs">· {r.country}</span>}
                         </button>
                       ))}
+                      <button type="button" onClick={() => { const manual = { id: `__manual__${opponentQuery}`, sport: sportFilter as Sport, entityType: "manual", name: opponentQuery, shortName: null, country: null }; setSelectedOpponent(manual); setOpponentResults([]); }}
+                        className="w-full text-left px-4 py-2.5 text-sm text-blue-400 hover:bg-[#22263a] transition-colors">
+                        + Use &ldquo;{opponentQuery}&rdquo;
+                      </button>
                     </div>
                   )}
                 </div>
@@ -383,13 +391,22 @@ export default function LogClient() {
                   </div>
                   <div>
                     <label className="text-xs text-gray-400 block mb-1.5">Score (optional)</label>
-                    <div className="flex items-center gap-1.5">
-                      <input type="number" min="0" value={myScore} onChange={e => setMyScore(e.target.value)}
-                        placeholder="–" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white text-center focus:border-blue-500 focus:outline-none" />
-                      <span className="text-gray-500 text-sm">:</span>
-                      <input type="number" min="0" value={oppScore} onChange={e => setOppScore(e.target.value)}
-                        placeholder="–" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white text-center focus:border-blue-500 focus:outline-none" />
-                    </div>
+                    {sportFilter === "CRICKET" ? (
+                      <div className="space-y-1.5">
+                        <input type="text" value={myScore} onChange={e => setMyScore(e.target.value)}
+                          placeholder="e.g. 287/6 (50 ov)" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white focus:border-blue-500 focus:outline-none" />
+                        <input type="text" value={oppScore} onChange={e => setOppScore(e.target.value)}
+                          placeholder="e.g. 245 (48.2 ov)" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white focus:border-blue-500 focus:outline-none" />
+                      </div>
+                    ) : (
+                      <div className="flex items-center gap-1.5">
+                        <input type="text" inputMode="numeric" value={myScore} onChange={e => setMyScore(e.target.value)}
+                          placeholder="–" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white text-center focus:border-blue-500 focus:outline-none" />
+                        <span className="text-gray-500 text-sm">:</span>
+                        <input type="text" inputMode="numeric" value={oppScore} onChange={e => setOppScore(e.target.value)}
+                          placeholder="–" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white text-center focus:border-blue-500 focus:outline-none" />
+                      </div>
+                    )}
                   </div>
                 </div>
 

@@ -61,8 +61,8 @@ export default function EditForm({ entry, competitions }: { entry: Entry; compet
   const [venue, setVenue] = useState(entry.event.venue ?? "");
   const [season, setSeason] = useState(entry.event.season);
   const [competitionId, setCompetitionId] = useState(entry.event.competitionId);
-  const [homeScore, setHomeScore] = useState(homeParticipant?.result?.score != null ? String(homeParticipant.result.score) : "");
-  const [awayScore, setAwayScore] = useState(awayParticipant?.result?.score != null ? String(awayParticipant.result.score) : "");
+  const [homeScore, setHomeScore] = useState((homeParticipant?.result as { scoreText?: string; score?: number } | null)?.scoreText ?? (homeParticipant?.result as { score?: number } | null)?.score?.toString() ?? "");
+  const [awayScore, setAwayScore] = useState((awayParticipant?.result as { scoreText?: string; score?: number } | null)?.scoreText ?? (awayParticipant?.result as { score?: number } | null)?.score?.toString() ?? "");
 
   const [saving, setSaving] = useState(false);
   const isManual = entry.event.isManual;
@@ -82,8 +82,8 @@ export default function EditForm({ entry, competitions }: { entry: Entry; compet
             venue: venue || null,
             season,
             competitionId: competitionId || null,
-            homeScore: homeScore !== "" ? Number(homeScore) : null,
-            awayScore: awayScore !== "" ? Number(awayScore) : null,
+            homeScoreText: homeScore || null,
+            awayScoreText: awayScore || null,
           }),
         });
         if (!evRes.ok) throw new Error("Failed to update event");
@@ -124,14 +124,14 @@ export default function EditForm({ entry, competitions }: { entry: Entry; compet
               <div className="flex items-center gap-2">
                 <div className="flex-1 text-center">
                   <p className="text-xs text-gray-500 mb-1">{homeParticipant?.entity.shortName ?? homeParticipant?.entity.name ?? "Home"}</p>
-                  <input type="number" min="0" value={homeScore} onChange={e => setHomeScore(e.target.value)}
-                    placeholder="–" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white text-center focus:border-blue-500 focus:outline-none" />
+                  <input type="text" inputMode={entry.event.sport === "CRICKET" ? "text" : "numeric"} value={homeScore} onChange={e => setHomeScore(e.target.value)}
+                    placeholder={entry.event.sport === "CRICKET" ? "287/6 (50 ov)" : "–"} className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white text-center focus:border-blue-500 focus:outline-none" />
                 </div>
                 <span className="text-gray-500 text-lg font-bold">:</span>
                 <div className="flex-1 text-center">
                   <p className="text-xs text-gray-500 mb-1">{awayParticipant?.entity.shortName ?? awayParticipant?.entity.name ?? "Away"}</p>
-                  <input type="number" min="0" value={awayScore} onChange={e => setAwayScore(e.target.value)}
-                    placeholder="–" className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white text-center focus:border-blue-500 focus:outline-none" />
+                  <input type="text" inputMode={entry.event.sport === "CRICKET" ? "text" : "numeric"} value={awayScore} onChange={e => setAwayScore(e.target.value)}
+                    placeholder={entry.event.sport === "CRICKET" ? "245 (48.2 ov)" : "–"} className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-2 py-2 text-sm text-white text-center focus:border-blue-500 focus:outline-none" />
                 </div>
               </div>
             </div>

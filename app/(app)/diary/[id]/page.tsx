@@ -54,7 +54,7 @@ export default async function DiaryEntryPage({
             {event.participants.map((p) => {
               const isHome = p.role === "HOME_TEAM";
               const isAway = p.role === "AWAY_TEAM";
-              const score = (p.result as { score?: number } | null)?.score;
+              const score = (p.result as { scoreText?: string; score?: number } | null)?.scoreText ?? (p.result as { score?: number } | null)?.score?.toString();
               return (
                 <span key={p.entityId} className="inline-flex items-center gap-1.5 text-sm text-white bg-white/5 px-3 py-1 rounded-lg">
                   {isHome && <span className="text-xs text-blue-400 font-medium">H</span>}

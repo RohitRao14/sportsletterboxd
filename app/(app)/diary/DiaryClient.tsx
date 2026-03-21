@@ -22,7 +22,7 @@ interface Entity {
 interface Participant {
   entityId: string;
   role: string;
-  result: { score?: number } | null;
+  result: { score?: number; scoreText?: string } | null;
   entity: Entity;
 }
 
@@ -366,8 +366,8 @@ function DiaryEntryCard({
 }) {
   const home = entry.event.participants.find(p => p.role === "HOME_TEAM");
   const away = entry.event.participants.find(p => p.role === "AWAY_TEAM");
-  const homeScore = (home?.result as { score?: number } | null)?.score;
-  const awayScore = (away?.result as { score?: number } | null)?.score;
+  const homeScore = (home?.result as { scoreText?: string; score?: number } | null)?.scoreText ?? (home?.result as { score?: number } | null)?.score?.toString();
+  const awayScore = (away?.result as { scoreText?: string; score?: number } | null)?.scoreText ?? (away?.result as { score?: number } | null)?.score?.toString();
   const hasScore = homeScore != null && awayScore != null;
   const participants = home && away
     ? hasScore
