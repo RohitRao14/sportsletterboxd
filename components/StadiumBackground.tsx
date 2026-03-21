@@ -2,88 +2,143 @@
 
 export function StadiumBackground() {
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
-      {/* Deep dark base */}
-      <div className="absolute inset-0 bg-[#060a0d]" />
+    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none select-none">
 
-      {/* Pitch green glow at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-64"
-        style={{ background: "radial-gradient(ellipse 80% 100% at 50% 100%, rgba(20,80,30,0.3) 0%, transparent 70%)" }} />
+      {/* Sky background */}
+      <div className="absolute inset-0" style={{
+        background: "linear-gradient(180deg, #040810 0%, #060d18 50%, #071020 100%)"
+      }} />
 
-      {/* ── Left floodlight tower ── */}
-      {/* Light source halo */}
-      <div className="absolute top-0 left-[8%] w-6 h-6 rounded-full"
-        style={{ background: "radial-gradient(circle, rgba(255,240,180,1) 0%, rgba(255,220,100,0.6) 40%, transparent 70%)", boxShadow: "0 0 40px 20px rgba(255,220,100,0.4), 0 0 80px 40px rgba(255,200,80,0.15)", animation: "flicker 6s ease-in-out infinite" }} />
+      {/* ── LEFT POLE ── */}
+      <svg className="absolute inset-0 w-full h-full" style={{ overflow: "visible" }}>
 
-      {/* Left beam 1 — main wide cone */}
-      <svg className="absolute top-0 left-0 w-1/2 h-full" style={{ animation: "beamPulse 8s ease-in-out infinite" }}>
+        {/* Pole */}
+        <rect x="18%" y="35%" width="0.5%" height="65%" fill="#1a2030" />
+
+        {/* Light cluster housing */}
+        <rect x="16.5%" y="32%" width="3.5%" height="3%" rx="3" fill="#1e2840" />
+
+        {/* Light bulbs on left pole */}
+        {[17, 18.2, 19.3].map((x, i) => (
+          <g key={i}>
+            <circle cx={`${x}%`} cy="33%" r="0.6%" fill="white" opacity="0.95" />
+            <circle cx={`${x}%`} cy="33%" r="1.2%" fill="rgba(255,230,120,0.5)" />
+            <circle cx={`${x}%`} cy="33%" r="2.5%" fill="rgba(255,210,80,0.2)" />
+          </g>
+        ))}
+
+        {/* Left halo glow */}
+        <ellipse cx="18.5%" cy="33%" rx="8%" ry="5%" fill="rgba(255,220,80,0.18)" />
+        <ellipse cx="18.5%" cy="33%" rx="4%" ry="2.5%" fill="rgba(255,235,140,0.25)" />
+
+        {/* Left wide beam */}
         <defs>
-          <linearGradient id="beam-l1" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="rgba(255,230,120,0.18)" />
-            <stop offset="60%" stopColor="rgba(255,220,100,0.04)" />
-            <stop offset="100%" stopColor="rgba(255,220,100,0)" />
+          <linearGradient id="leftBeam1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="rgba(255,220,80,0.35)" />
+            <stop offset="40%" stopColor="rgba(255,210,60,0.12)" />
+            <stop offset="100%" stopColor="rgba(255,200,40,0.03)" />
           </linearGradient>
+          <linearGradient id="leftBeam2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="rgba(255,240,160,0.55)" />
+            <stop offset="30%" stopColor="rgba(255,220,100,0.2)" />
+            <stop offset="100%" stopColor="rgba(255,200,60,0.0)" />
+          </linearGradient>
+          <linearGradient id="rightBeam1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="rgba(255,220,80,0.35)" />
+            <stop offset="40%" stopColor="rgba(255,210,60,0.12)" />
+            <stop offset="100%" stopColor="rgba(255,200,40,0.03)" />
+          </linearGradient>
+          <linearGradient id="rightBeam2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="rgba(255,240,160,0.55)" />
+            <stop offset="30%" stopColor="rgba(255,220,100,0.2)" />
+            <stop offset="100%" stopColor="rgba(255,200,60,0.0)" />
+          </linearGradient>
+          <filter id="haze">
+            <feGaussianBlur stdDeviation="8" />
+          </filter>
+          <filter id="softBeam">
+            <feGaussianBlur stdDeviation="3" />
+          </filter>
         </defs>
-        <polygon points="13%,0 8%,0 85%,100% 100%,100%" fill="url(#beam-l1)" />
+
+        {/* Left beam — wide cone (hazy) */}
+        <polygon
+          points="18.5%,33% 5%,100% 75%,100%"
+          fill="url(#leftBeam1)"
+          filter="url(#haze)"
+          style={{ animation: "beamPulse 7s ease-in-out infinite" }}
+        />
+        {/* Left beam — bright core */}
+        <polygon
+          points="18.5%,33% 12%,100% 55%,100%"
+          fill="url(#leftBeam2)"
+          filter="url(#softBeam)"
+          style={{ animation: "beamPulse 7s ease-in-out infinite 0.5s" }}
+        />
+
+        {/* ── RIGHT POLE ── */}
+        {/* Pole */}
+        <rect x="81.5%" y="35%" width="0.5%" height="65%" fill="#1a2030" />
+
+        {/* Light cluster housing */}
+        <rect x="80%" y="32%" width="3.5%" height="3%" rx="3" fill="#1e2840" />
+
+        {/* Light bulbs on right pole */}
+        {[80.7, 81.8, 83].map((x, i) => (
+          <g key={i}>
+            <circle cx={`${x}%`} cy="33%" r="0.6%" fill="white" opacity="0.95" />
+            <circle cx={`${x}%`} cy="33%" r="1.2%" fill="rgba(255,230,120,0.5)" />
+            <circle cx={`${x}%`} cy="33%" r="2.5%" fill="rgba(255,210,80,0.2)" />
+          </g>
+        ))}
+
+        {/* Right halo glow */}
+        <ellipse cx="81.5%" cy="33%" rx="8%" ry="5%" fill="rgba(255,220,80,0.18)" />
+        <ellipse cx="81.5%" cy="33%" rx="4%" ry="2.5%" fill="rgba(255,235,140,0.25)" />
+
+        {/* Right beam — wide cone (hazy) */}
+        <polygon
+          points="81.5%,33% 25%,100% 95%,100%"
+          fill="url(#rightBeam1)"
+          filter="url(#haze)"
+          style={{ animation: "beamPulse 7s ease-in-out infinite 1s" }}
+        />
+        {/* Right beam — bright core */}
+        <polygon
+          points="81.5%,33% 45%,100% 88%,100%"
+          fill="url(#rightBeam2)"
+          filter="url(#softBeam)"
+          style={{ animation: "beamPulse 7s ease-in-out infinite 1.5s" }}
+        />
+
+        {/* Mist/atmosphere in beam area */}
+        <ellipse cx="50%" cy="75%" rx="45%" ry="15%" fill="rgba(200,220,255,0.04)" filter="url(#haze)" />
+        <ellipse cx="50%" cy="85%" rx="50%" ry="10%" fill="rgba(200,220,255,0.03)" filter="url(#haze)" />
+
       </svg>
 
-      {/* Left beam 2 — narrow inner beam */}
-      <svg className="absolute top-0 left-0 w-1/2 h-full" style={{ animation: "beamPulse 8s ease-in-out infinite 1s" }}>
-        <defs>
-          <linearGradient id="beam-l2" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="rgba(255,245,200,0.25)" />
-            <stop offset="40%" stopColor="rgba(255,235,150,0.08)" />
-            <stop offset="100%" stopColor="rgba(255,235,150,0)" />
-          </linearGradient>
-        </defs>
-        <polygon points="10%,0 6%,0 55%,100% 70%,100%" fill="url(#beam-l2)" />
-      </svg>
+      {/* Green grass glow at bottom */}
+      <div className="absolute bottom-0 left-0 right-0" style={{
+        height: "35%",
+        background: "radial-gradient(ellipse 90% 80% at 50% 100%, rgba(30,110,40,0.45) 0%, rgba(15,60,20,0.2) 50%, transparent 100%)"
+      }} />
 
-      {/* ── Right floodlight tower ── */}
-      {/* Light source halo */}
-      <div className="absolute top-0 right-[8%] w-6 h-6 rounded-full"
-        style={{ background: "radial-gradient(circle, rgba(255,240,180,1) 0%, rgba(255,220,100,0.6) 40%, transparent 70%)", boxShadow: "0 0 40px 20px rgba(255,220,100,0.4), 0 0 80px 40px rgba(255,200,80,0.15)", animation: "flicker 6s ease-in-out infinite 2s" }} />
+      {/* Overall atmosphere haze */}
+      <div className="absolute inset-0" style={{
+        background: "radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,210,80,0.04) 0%, transparent 70%)"
+      }} />
 
-      {/* Right beam 1 — main wide cone */}
-      <svg className="absolute top-0 right-0 w-1/2 h-full" style={{ animation: "beamPulse 8s ease-in-out infinite 0.5s" }}>
-        <defs>
-          <linearGradient id="beam-r1" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="rgba(255,230,120,0.18)" />
-            <stop offset="60%" stopColor="rgba(255,220,100,0.04)" />
-            <stop offset="100%" stopColor="rgba(255,220,100,0)" />
-          </linearGradient>
-        </defs>
-        <polygon points="87%,0 92%,0 15%,100% 0%,100%" fill="url(#beam-r1)" />
-      </svg>
-
-      {/* Right beam 2 — narrow inner beam */}
-      <svg className="absolute top-0 right-0 w-1/2 h-full" style={{ animation: "beamPulse 8s ease-in-out infinite 1.5s" }}>
-        <defs>
-          <linearGradient id="beam-r2" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="rgba(255,245,200,0.25)" />
-            <stop offset="40%" stopColor="rgba(255,235,150,0.08)" />
-            <stop offset="100%" stopColor="rgba(255,235,150,0)" />
-          </linearGradient>
-        </defs>
-        <polygon points="90%,0 94%,0 45%,100% 30%,100%" fill="url(#beam-r2)" />
-      </svg>
-
-      {/* Grain texture overlay */}
-      <div className="absolute inset-0 opacity-40"
-        style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E\")", backgroundRepeat: "repeat", backgroundSize: "200px 200px" }} />
+      {/* Grain */}
+      <div className="absolute inset-0" style={{
+        opacity: 0.35,
+        backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E\")",
+        backgroundSize: "180px 180px"
+      }} />
 
       <style>{`
-        @keyframes flicker {
-          0%, 100% { opacity: 1; }
-          45% { opacity: 0.92; }
-          50% { opacity: 0.98; }
-          55% { opacity: 0.88; }
-          60% { opacity: 1; }
-          80% { opacity: 0.95; }
-        }
         @keyframes beamPulse {
           0%, 100% { opacity: 1; }
-          50% { opacity: 0.85; }
+          50% { opacity: 0.8; }
         }
       `}</style>
     </div>
