@@ -37,6 +37,7 @@ interface Event {
   country: string | null;
   competition: { name: string; shortName: string | null };
   participants: Participant[];
+  sportMeta: { format?: string } | null;
 }
 
 interface DiaryEntry {
@@ -381,6 +382,11 @@ function DiaryEntryCard({
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1.5 flex-wrap">
             <SportBadge sport={entry.sport} size="xs" />
+            {entry.sport === "CRICKET" && (entry.event.sportMeta as { format?: string } | null)?.format && (
+              <span className="text-xs text-gray-500 bg-white/5 px-1.5 py-0.5 rounded">
+                {(entry.event.sportMeta as { format?: string })!.format}
+              </span>
+            )}
             <span className="text-xs text-gray-500">
               {entry.event.competition.shortName ?? entry.event.competition.name}
             </span>

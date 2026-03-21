@@ -49,23 +49,61 @@ export default async function DiaryEntryPage({
         <h1 className="text-2xl font-bold text-white mb-1">{event.name}</h1>
 
         {/* Participants */}
-        {event.participants.length > 0 && (
-          <div className="flex flex-wrap gap-2 mb-4">
-            {event.participants.map((p) => {
-              const isHome = p.role === "HOME_TEAM";
-              const isAway = p.role === "AWAY_TEAM";
-              const score = (p.result as { scoreText?: string; score?: number } | null)?.scoreText ?? (p.result as { score?: number } | null)?.score?.toString();
-              return (
-                <span key={p.entityId} className="inline-flex items-center gap-1.5 text-sm text-white bg-white/5 px-3 py-1 rounded-lg">
-                  {isHome && <span className="text-xs text-blue-400 font-medium">H</span>}
-                  {isAway && <span className="text-xs text-gray-500 font-medium">A</span>}
-                  <span>{p.entity.name}</span>
-                  {score != null && <span className="text-gray-400 font-bold">{score}</span>}
-                </span>
-              );
-            })}
-          </div>
-        )}
+        {event.participants.length > 0 && (() => {
+          const sportMeta = event.sportMeta as { format?: string; cricketResult?: string } | null;
+          const isTest = sportMeta?.format === "Test";
+          return (
+            <div className="mb-4">
+              {isTest ? (
+                // Test match: show innings table
+                <div className="bg-white/5 rounded-lg overflow-hidden text-sm">
+                  <div className="grid grid-cols-3 text-xs text-gray-500 px-3 py-1.5 border-b border-white/5">
+                    <span>Team</span>
+                    <span className="text-center">1st inn</span>
+                    <span className="text-center">2nd inn</span>
+                  </div>
+                  {event.participants.map((p) => {
+                    const r = p.result as { inn1?: string; inn2?: string } | null;
+                    const isHome = p.role === "HOME_TEAM";
+                    return (
+                      <div key={p.entityId} className="grid grid-cols-3 px-3 py-2 border-b border-white/5 last:border-0">
+                        <span className="flex items-center gap-1.5 text-white">
+                          {isHome && <span className="text-xs text-blue-400 font-medium">H</span>}
+                          {!isHome && <span className="text-xs text-gray-500 font-medium">A</span>}
+                          {p.entity.shortName ?? p.entity.name}
+                        </span>
+                        <span className="text-center text-gray-300">{r?.inn1 ?? "–"}</span>
+                        <span className="text-center text-gray-300">{r?.inn2 ?? "–"}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="flex flex-wrap gap-2">
+                  {event.participants.map((p) => {
+                    const isHome = p.role === "HOME_TEAM";
+                    const isAway = p.role === "AWAY_TEAM";
+                    const score = (p.result as { scoreText?: string; score?: number } | null)?.scoreText ?? (p.result as { score?: number } | null)?.score?.toString();
+                    return (
+                      <span key={p.entityId} className="inline-flex items-center gap-1.5 text-sm text-white bg-white/5 px-3 py-1 rounded-lg">
+                        {isHome && <span className="text-xs text-blue-400 font-medium">H</span>}
+                        {isAway && <span className="text-xs text-gray-500 font-medium">A</span>}
+                        <span>{p.entity.name}</span>
+                        {score != null && <span className="text-gray-400 font-bold">{score}</span>}
+                      </span>
+                    );
+                  })}
+                </div>
+              )}
+              {sportMeta?.cricketResult && (
+                <p className="text-sm text-green-400 mt-2">{sportMeta.cricketResult}</p>
+              )}
+              {sportMeta?.format && (
+                <span className="inline-block mt-2 text-xs text-gray-500 bg-white/5 px-2 py-0.5 rounded">{sportMeta.format}</span>
+              )}
+            </div>
+          );
+        })()}
 
         {/* Event metadata */}
         <div className="grid grid-cols-2 gap-3 text-sm mb-6">
