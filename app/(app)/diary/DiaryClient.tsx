@@ -58,7 +58,6 @@ interface DiaryResponse {
 }
 
 const SPORTS = Object.values(Sport);
-const SEASONS = ["2025-26", "2026", "2025", "2024-25", "2024"];
 
 export default function DiaryClient() {
   const { filters, setFilters, clearFilters } = usePersistedFilters();
@@ -80,7 +79,6 @@ export default function DiaryClient() {
     if (filters.viewingMethod) params.set("viewingMethod", filters.viewingMethod);
     if (filters.dateFrom) params.set("dateFrom", filters.dateFrom);
     if (filters.dateTo) params.set("dateTo", filters.dateTo);
-    if (filters.season) params.set("season", filters.season);
     if (filters.sortBy) params.set("sortBy", filters.sortBy);
     if (filters.sortDir) params.set("sortDir", filters.sortDir);
     params.set("page", filters.page ?? "1");
@@ -114,7 +112,7 @@ export default function DiaryClient() {
 
   const hasActiveFilters = !!(
     filters.sport || filters.entityId || filters.ratingMin || filters.ratingMax ||
-    filters.viewingMethod || filters.dateFrom || filters.dateTo || filters.season
+    filters.viewingMethod || filters.dateFrom || filters.dateTo
   );
 
   const FilterSidebar = (
@@ -181,21 +179,6 @@ export default function DiaryClient() {
             </button>
           ))}
         </div>
-      </div>
-
-      {/* Season */}
-      <div>
-        <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-2">Season</label>
-        <select
-          value={filters.season ?? ""}
-          onChange={(e) => setFilters({ season: e.target.value })}
-          className="w-full bg-[#1a1d27] border border-[#2a2d3a] rounded-lg px-3 py-2 text-sm text-white"
-        >
-          <option value="">All seasons</option>
-          {SEASONS.map((s) => (
-            <option key={s} value={s}>{s}</option>
-          ))}
-        </select>
       </div>
 
       {/* Date Range */}
