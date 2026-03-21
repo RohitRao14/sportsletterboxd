@@ -441,7 +441,7 @@ function DiaryEntryCard({
   return (
     <div className={`bg-white/5 backdrop-blur-sm border-t border-r border-b border-white/8 border-l-2 ${borderCls} rounded-xl p-4 hover:bg-white/8 transition-colors group`}>
       <div className="flex items-start justify-between gap-4">
-        <div className="flex-1 min-w-0">
+        <Link href={`/diary/${entry.id}`} className="flex-1 min-w-0 block">
           {/* Meta row */}
           <div className="flex items-center gap-2 mb-1.5 flex-wrap">
             <SportBadge sport={entry.sport} size="xs" />
@@ -472,11 +472,9 @@ function DiaryEntryCard({
               {home.entity.shortName ?? home.entity.name} <span className="text-gray-500 font-normal">vs</span> {away.entity.shortName ?? away.entity.name}
             </p>
           ) : (
-            <Link href={`/diary/${entry.id}`} className="group/link">
-              <h3 className="font-semibold text-white text-sm leading-snug group-hover/link:text-blue-400 transition-colors my-1">
-                {entry.event.name}
-              </h3>
-            </Link>
+            <h3 className="font-semibold text-white text-sm leading-snug my-1">
+              {entry.event.name}
+            </h3>
           )}
 
           {/* Footer row */}
@@ -498,7 +496,7 @@ function DiaryEntryCard({
           {entry.notes && (
             <p className="text-xs text-gray-400 mt-2 line-clamp-2">{entry.notes}</p>
           )}
-        </div>
+        </Link>
 
         <div className="flex gap-1 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity flex-shrink-0">
           <button onClick={onEdit} className="p-1.5 rounded text-gray-400 hover:text-white hover:bg-white/10 transition-colors text-xs" title="Edit">✏️</button>

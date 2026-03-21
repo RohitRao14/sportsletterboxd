@@ -37,7 +37,7 @@ export default async function DiaryEntryPage({
         ← Back to diary
       </Link>
 
-      <div className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl p-6 mt-4">
+      <div className="bg-white/5 backdrop-blur-sm border border-white/8 rounded-xl p-6 mt-4">
         {/* Sport + competition */}
         <div className="flex items-center gap-2 mb-3">
           <SportBadge sport={entry.sport} />
