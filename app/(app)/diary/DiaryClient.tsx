@@ -69,19 +69,19 @@ export default function DiaryClient() {
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   const [deleteId, setDeleteId] = useState<string | null>(null);
 
-  const fetchDiary = useCallback(async () => {
+  const fetchDiary = useCallback(async (f: typeof filters) => {
     setLoading(true);
     const params = new URLSearchParams();
-    if (filters.sport) params.set("sport", filters.sport);
-    if (filters.entityId) params.set("entityId", filters.entityId);
-    if (filters.ratingMin) params.set("ratingMin", filters.ratingMin);
-    if (filters.ratingMax) params.set("ratingMax", filters.ratingMax);
-    if (filters.viewingMethod) params.set("viewingMethod", filters.viewingMethod);
-    if (filters.dateFrom) params.set("dateFrom", filters.dateFrom);
-    if (filters.dateTo) params.set("dateTo", filters.dateTo);
-    if (filters.sortBy) params.set("sortBy", filters.sortBy);
-    if (filters.sortDir) params.set("sortDir", filters.sortDir);
-    params.set("page", filters.page ?? "1");
+    if (f.sport) params.set("sport", f.sport);
+    if (f.entityId) params.set("entityId", f.entityId);
+    if (f.ratingMin) params.set("ratingMin", f.ratingMin);
+    if (f.ratingMax) params.set("ratingMax", f.ratingMax);
+    if (f.viewingMethod) params.set("viewingMethod", f.viewingMethod);
+    if (f.dateFrom) params.set("dateFrom", f.dateFrom);
+    if (f.dateTo) params.set("dateTo", f.dateTo);
+    if (f.sortBy) params.set("sortBy", f.sortBy);
+    if (f.sortDir) params.set("sortDir", f.sortDir);
+    params.set("page", f.page ?? "1");
     params.set("pageSize", "20");
 
     try {
@@ -93,17 +93,20 @@ export default function DiaryClient() {
     } finally {
       setLoading(false);
     }
-  }, [filters, toast]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [toast]);
 
+  const filtersKey = JSON.stringify(filters);
   useEffect(() => {
-    fetchDiary();
-  }, [fetchDiary]);
+    fetchDiary(filters);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filtersKey]);
 
   async function handleDelete(id: string) {
     const res = await fetch(`/api/diary/${id}`, { method: "DELETE" });
     if (res.ok) {
       toast("Entry deleted");
-      fetchDiary();
+      fetchDiary(filters);
     } else {
       toast("Failed to delete", "error");
     }
