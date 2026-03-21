@@ -22,7 +22,7 @@ export function Nav() {
   }
 
   return (
-    <nav className="border-b border-[#2a2d3a] bg-[#0f1117]/80 backdrop-blur-sm sticky top-0 z-40">
+    <nav className="border-b border-white/5 bg-black/40 backdrop-blur-md sticky top-0 z-40 shadow-[0_1px_30px_rgba(0,0,0,0.6)]">
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
         <Link href="/diary" className="font-bold text-white text-lg tracking-tight">
           Box<span className="text-blue-400">Scord</span>
