@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { usePersistedFilters } from "@/hooks/usePersistedFilters";
@@ -17,6 +17,8 @@ interface Entity {
   id: string;
   name: string;
   shortName: string | null;
+  sport?: string;
+  country?: string | null;
 }
 
 interface Participant {
@@ -71,13 +73,43 @@ export default function DiaryClient() {
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   const [deleteId, setDeleteId] = useState<string | null>(null);
 
+  // Team filter search
+  const [teamQuery, setTeamQuery] = useState("");
+  const [teamResults, setTeamResults] = useState<Entity[]>([]);
+  const [teamSearching, setTeamSearching] = useState(false);
+  const [selectedTeam, setSelectedTeam] = useState<Entity | null>(null);
+  const teamDebounceRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Sync selectedTeam display when entityId filter is cleared
+  useEffect(() => {
+    if (!filters.entityId) { setSelectedTeam(null); setTeamQuery(""); }
+  }, [filters.entityId]);
+
+  // Debounced team search
+  useEffect(() => {
+    if (!teamQuery.trim()) { setTeamResults([]); return; }
+    if (teamDebounceRef.current) clearTimeout(teamDebounceRef.current);
+    teamDebounceRef.current = setTimeout(async () => {
+      setTeamSearching(true);
+      try {
+        const params = new URLSearchParams({ q: teamQuery });
+        if (filters.sport) params.set("sport", filters.sport);
+        const res = await fetch(`/api/entities?${params}`);
+        const d = await res.json();
+        setTeamResults(Array.isArray(d) ? d : []);
+      } catch { setTeamResults([]); }
+      finally { setTeamSearching(false); }
+    }, 300);
+    return () => { if (teamDebounceRef.current) clearTimeout(teamDebounceRef.current); };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [teamQuery, filters.sport]);
+
   const fetchDiary = useCallback(async (f: typeof filters) => {
     setLoading(true);
     const params = new URLSearchParams();
     if (f.sport) params.set("sport", f.sport);
     if (f.entityId) params.set("entityId", f.entityId);
-    if (f.ratingMin) params.set("ratingMin", f.ratingMin);
-    if (f.ratingMax) params.set("ratingMax", f.ratingMax);
+    if (f.rating) params.set("rating", f.rating);
     if (f.viewingMethod) params.set("viewingMethod", f.viewingMethod);
     if (f.dateFrom) params.set("dateFrom", f.dateFrom);
     if (f.dateTo) params.set("dateTo", f.dateTo);
@@ -116,7 +148,7 @@ export default function DiaryClient() {
   }
 
   const hasActiveFilters = !!(
-    filters.sport || filters.entityId || filters.ratingMin || filters.ratingMax ||
+    filters.sport || filters.entityId || filters.rating ||
     filters.viewingMethod || filters.dateFrom || filters.dateTo
   );
 
@@ -142,18 +174,50 @@ export default function DiaryClient() {
         </div>
       </div>
 
+      {/* Team */}
+      <div>
+        <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-2">Team</label>
+        {selectedTeam ? (
+          <div className="flex items-center justify-between bg-white/5 rounded-lg px-3 py-2 text-sm">
+            <span className="text-white truncate">{selectedTeam.name}</span>
+            <button onClick={() => { setSelectedTeam(null); setTeamQuery(""); setFilters({ entityId: "" }); }}
+              className="text-gray-500 hover:text-white ml-2 flex-shrink-0">✕</button>
+          </div>
+        ) : (
+          <div className="relative">
+            <input
+              type="text"
+              value={teamQuery}
+              onChange={e => setTeamQuery(e.target.value)}
+              placeholder="Search teams..."
+              className="w-full bg-[#0f1117] border border-[#2a2d3a] rounded-lg px-3 py-2 text-sm text-white placeholder-gray-600 focus:border-blue-500 focus:outline-none"
+            />
+            {teamSearching && <p className="text-xs text-gray-500 mt-1">Searching...</p>}
+            {teamResults.length > 0 && (
+              <div className="absolute z-10 w-full mt-1 bg-[#1a1d27] border border-[#2a2d3a] rounded-xl overflow-hidden shadow-xl">
+                {teamResults.slice(0, 6).map(r => (
+                  <button key={r.id} onClick={() => { setSelectedTeam(r); setTeamQuery(r.name); setTeamResults([]); setFilters({ entityId: r.id }); }}
+                    className="w-full text-left px-3 py-2 text-sm text-white hover:bg-[#22263a] transition-colors border-b border-[#2a2d3a] last:border-0">
+                    <span>{r.name}</span>
+                    {r.country && <span className="text-gray-500 text-xs ml-1">· {r.country}</span>}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
       {/* Rating */}
       <div>
-        <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-2">Min Rating</label>
+        <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider block mb-2">Rating</label>
         <div className="flex gap-1">
           {[1, 2, 3, 4, 5].map((r) => (
             <button
               key={r}
-              onClick={() =>
-                setFilters({ ratingMin: filters.ratingMin === String(r) ? "" : String(r) })
-              }
+              onClick={() => setFilters({ rating: filters.rating === String(r) ? "" : String(r) })}
               className={`w-9 h-9 rounded text-sm font-medium transition-colors ${
-                filters.ratingMin === String(r)
+                filters.rating === String(r)
                   ? "bg-yellow-600 text-white"
                   : "bg-white/10 text-gray-300 hover:bg-white/20"
               }`}

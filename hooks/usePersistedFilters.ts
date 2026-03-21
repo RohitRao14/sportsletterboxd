@@ -6,8 +6,7 @@ import { useRouter, useSearchParams, usePathname } from "next/navigation";
 export interface DiaryFilters {
   sport?: string;
   entityId?: string;
-  ratingMin?: string;
-  ratingMax?: string;
+  rating?: string;
   viewingMethod?: string;
   dateFrom?: string;
   dateTo?: string;
@@ -24,8 +23,7 @@ export function usePersistedFilters() {
   const filters: DiaryFilters = {
     sport: searchParams.get("sport") ?? undefined,
     entityId: searchParams.get("entityId") ?? undefined,
-    ratingMin: searchParams.get("ratingMin") ?? undefined,
-    ratingMax: searchParams.get("ratingMax") ?? undefined,
+    rating: searchParams.get("rating") ?? undefined,
     viewingMethod: searchParams.get("viewingMethod") ?? undefined,
     dateFrom: searchParams.get("dateFrom") ?? undefined,
     dateTo: searchParams.get("dateTo") ?? undefined,

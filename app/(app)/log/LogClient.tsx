@@ -277,6 +277,21 @@ export default function LogClient() {
         ))}
       </div>
 
+      {/* Cricket format selector — shown immediately when CRICKET is selected */}
+      {sportFilter === "CRICKET" && (
+        <div className="mb-4">
+          <label className="text-xs text-gray-400 block mb-1.5">Format</label>
+          <div className="flex gap-1.5">
+            {(["T20", "ODI", "Test"] as const).map(f => (
+              <button key={f} type="button" onClick={() => setCricketFormat(f)}
+                className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${cricketFormat === f ? "bg-blue-600 text-white" : "bg-white/10 text-gray-300 hover:bg-white/20"}`}>
+                {f}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {isTeamMode ? (
         /* ── Team search ── */
         <div className="space-y-3 mb-4">
@@ -403,21 +418,6 @@ export default function LogClient() {
             {isTeamMode && (
               <div className="bg-[#1a1d27] border border-[#2a2d3a] rounded-xl p-5 space-y-4">
                 <p className="text-xs text-gray-500 uppercase tracking-wider font-medium">Game Details</p>
-
-                {/* Cricket format selector */}
-                {sportFilter === "CRICKET" && (
-                  <div>
-                    <label className="text-xs text-gray-400 block mb-1.5">Format</label>
-                    <div className="flex gap-1.5">
-                      {(["T20", "ODI", "Test"] as const).map(f => (
-                        <button key={f} type="button" onClick={() => setCricketFormat(f)}
-                          className={`flex-1 py-2 rounded-lg text-xs font-medium transition-colors ${cricketFormat === f ? "bg-blue-600 text-white" : "bg-white/10 text-gray-300 hover:bg-white/20"}`}>
-                          {f}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
 
                 {/* Score */}
                 {sportFilter === "CRICKET" ? (

@@ -9,11 +9,8 @@ export async function GET(request: NextRequest) {
 
   const sport = searchParams.get("sport") as Sport | null;
   const entityId = searchParams.get("entityId");
-  const ratingMin = searchParams.get("ratingMin")
-    ? parseInt(searchParams.get("ratingMin")!)
-    : null;
-  const ratingMax = searchParams.get("ratingMax")
-    ? parseInt(searchParams.get("ratingMax")!)
+  const rating = searchParams.get("rating")
+    ? parseInt(searchParams.get("rating")!)
     : null;
   const viewingMethod = searchParams.get("viewingMethod") as ViewingMethod | null;
   const dateFrom = searchParams.get("dateFrom");
@@ -32,10 +29,8 @@ export async function GET(request: NextRequest) {
   if (sport && Object.values(Sport).includes(sport)) {
     where.sport = sport;
   }
-  if (ratingMin !== null || ratingMax !== null) {
-    where.rating = {};
-    if (ratingMin !== null) where.rating.gte = ratingMin;
-    if (ratingMax !== null) where.rating.lte = ratingMax;
+  if (rating !== null && !isNaN(rating)) {
+    where.rating = rating;
   }
   if (
     viewingMethod &&
@@ -80,10 +75,9 @@ export async function GET(request: NextRequest) {
         event: {
           include: {
             competition: true,
-            participants: {
-              include: { entity: true },
-            },
+            participants: { include: { entity: true } },
           },
+          // sportMeta is a JSON field, always included
         },
       },
     }),
